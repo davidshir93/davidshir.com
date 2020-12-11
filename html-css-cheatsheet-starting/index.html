@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Cheatsheet David</title>
+    <title>CSS selectors and specificity</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>CSS Cheatsheet David</h1>
+    <h1>CSS selectors and specificity</h1>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Syntax</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">body {<br>};</th>
+                <td>Tag Selector</td>
+                <td>Use for selecting HTML tags</td>
+            </tr>
+            <tr>
+                <th scope="row">.class {<br>};</th>
+                <td>Class Selector</td>
+                <td>Use for selecting classes. Remember classes should / can be used in more than one place</td>
+            </tr>
+            <tr>
+                <th scope="row">#id {<br>};</th>
+                <td>ID Selector</td>
+                <td>Use for selecting specific IDs. Remember IDs can be used only for specific element.</td>
+            </tr>
+            <tr>
+                <th scope="row">h1, h2 {<br>};</th>
+                <td>Groups of CSS Selectors</td>
+                <td>Match multiple selectors to the same CSS rule, using a comma-separated list.</td>
+            </tr>
+            <tr>
+                <th scope="row">width: 200px !important;</th>
+                <td>!important Rule</td>
+                <td>Used on declarations to override any other declarations for a property and ignore selector specificity.</td>
+            </tr>
+            <tr>
+                <th scope="row">h3.section-heading {<br>}</th>
+                <td>Chaining Selectors</td>
+                <td>CSS selectors can be chained so that rule sets apply only to elements that match all criteria.</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
