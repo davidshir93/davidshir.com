@@ -5,31 +5,38 @@ body {
 
 h1 {
 }
-
+#colors {
+    display: flex;
+}
 .color-panel {
-    display: inline-block;
     margin: 24px 12px;
     padding: 24px;
+    align-items: center;
     width: 16%;
     height: 150px;
     min-width: 150px;
     border: #231F20 solid 1px;
     text-align: center;
     border-radius: 10px;
+    justify-content: center;
 }
 
 .color-panel.warm-black {
     background-color: #231F20;
 }
+
 .color-panel.hamra-red {
     background-color: #BB4430;
 }
+
 .color-panel.sky-turkiz {
     background-color: #7EBDC2;
 }
+
 .color-panel.cream-yellow {
     background-color: #F3DFA2;
 }
+
 .color-panel.off-white {
     background-color: #EFE6DD;
 }
