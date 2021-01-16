@@ -1,18 +1,53 @@
 body {
     background-color: #EFE6DD;
-    margin: 0 10%;
+    margin: 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 24px;
+    font-size: 18px;
 }
 
+.fonts {
+    background-color: #7EBDC2;
+    color: #231F20;
+}
+
+.body-container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 24px;
+}
+
+#text-styles {
+
+}
+
+
 h1 {
+    font-size: 48px;
+    font-weight: 800;
 }
-#colors {
-    display: flex;
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
 }
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+p, ul li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .color-panel {
+    display: inline-block;
     margin: 24px 12px;
     padding: 24px;
     align-items: center;
-    width: 16%;
+    width: 12%;
     height: 150px;
     min-width: 150px;
     border: #231F20 solid 1px;
@@ -47,4 +82,24 @@ h1 {
 
 .color-panel.sky-turkiz p, .color-panel.cream-yellow p, .color-panel.off-white p {
     color: #231F20;
+}
+
+.font-label {
+    text-decoration: underline;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.black {
+    font-weight: 800;
 }
