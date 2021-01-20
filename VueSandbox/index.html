@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
     <title>Vue.js Sandbox</title>
 </head>
+
 <body>
     <!-- <script>
         confetti({
@@ -19,13 +21,13 @@
     <script>
         var count = 600;
         var defaults = {
-        origin: { y: .95 }
+            origin: { y: .95 }
         };
 
         function fire(particleRatio, opts) {
-        confetti(Object.assign({}, defaults, opts, {
-            particleCount: Math.floor(count * particleRatio)
-        }));
+            confetti(Object.assign({}, defaults, opts, {
+                particleCount: Math.floor(count * particleRatio)
+            }));
         }
 
         fire(0.25, {
@@ -58,12 +60,14 @@
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
         }
+
         .snackbar {
-            animation: popIn .5s cubic-bezier(0,1,.81,1.11) forwards;
+            animation: popIn .5s cubic-bezier(0, 1, .81, 1.11) forwards;
             display: block;
             position: relative;
             float: middle;
@@ -75,6 +79,7 @@
         }
     </style>
 
-    <img class="snackbar" src="assets/snackbar.png"/>
+    <img class="snackbar" src="assets/snackbar.png" />
 </body>
+
 </html>
