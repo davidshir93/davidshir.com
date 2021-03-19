@@ -2,24 +2,45 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     color: seashell;
-    opacity: 0.9;
+    opacity: .95;
 }
 
 body {
     background-color: rgb(28, 28, 28);
-    max-width: 1024px;
+    /* max-width: 1024px; */
     margin: 0 auto;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerNoFlex {
+    max-width: 1024px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header {
     height: 69px;
-    position: fixed;
-    position: relative;
+    background-color: rgb(28, 28, 28);
+    position: sticky;
+    top: 0;
     border-bottom: 1px solid seashell;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    justify-content: space-between;
+    padding: 10px;
+    z-index: 1;
+    opacity: 1;
 }
 
 li {
@@ -31,15 +52,18 @@ li {
 .banner {
     background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     height: 700px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .banner .black {
     background-color: rgb(28, 28, 28);
     padding: 1rem;
+    width: 100%;
 }
 
 h2, h4 {
@@ -87,11 +111,10 @@ h4 {
 }
 
 .locations {
-    position: relative;
     height: 500px;
     background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-around;
