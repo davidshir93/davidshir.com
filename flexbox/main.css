@@ -7,8 +7,6 @@
 
 body {
     background-color: rgb(28, 28, 28);
-    /* max-width: 1024px;
-    margin: 0 auto; */
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -16,7 +14,6 @@ body {
 header {
     height: 69px;
     position: fixed;
-    /* width: 100%; */
     position: relative;
     border-bottom: 1px solid seashell;
     display: flex;
@@ -62,14 +59,15 @@ h4 {
     margin-top: 0;
 }
 
-.boxes {
+.boxes, .locationBoxes{
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+
 }
 
-.box {
-    /* height: 200px; */
+.box , .locationBox{
     width: 300px;
     margin: 0 0.5rem;
 }
@@ -80,4 +78,27 @@ h4 {
 
 .box h4 {
     margin-top: .5rem;
+}
+
+.locationBox {
+    background-color:  rgb(28, 28, 28);
+    text-align: center;
+    margin: 15px .5rem;
+}
+
+.locations {
+    position: relative;
+    height: 500px;
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.bottom {
+    height: 200px;
+    text-align: center;
 }
