@@ -88,10 +88,12 @@ header .container h2{
 }
 
 .right {
-    width: 300px;
-    height: 296px;
-    margin: 80px;
-    background-color: azure;
+    width: 396px;
+    height: 390px;
+    margin: 40px;
+    background-image: url(/images/bannerImage.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .container h2 {
@@ -128,6 +130,7 @@ header .container h2{
     width: 336px;
     height: 336px;
     margin: 0;
+
 }
 
 .featureBox p {
