@@ -1,0 +1,224 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+}
+
+h2 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+p {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.caption {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.container {
+    width: 1272px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 32px;
+
+}
+
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+
+header .container h2{
+    padding-bottom: 16px;
+    margin: 0;
+}
+
+.banner .container {
+    display: flex;
+    padding-bottom: 96px;
+    padding-top: 96px;
+}
+
+.banner .container .left h1 {
+    margin-top: 0;
+}
+
+.left {
+    width: 50%;
+    padding: 64px;
+}
+
+.right {
+    width: 300px;
+    height: 296px;
+    margin: 80px;
+    background-color: azure;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+#keyFeatures .container , #reviews .container, #contactUs .container{
+    padding-bottom: 48px;
+    padding-top: 48px;
+}
+
+#contactUs .container{
+    padding-bottom: 40px;
+    padding-top: 48px;
+}
+
+.featureBoxesContainer {
+    display: flex;
+}
+
+.featureBox {
+    width: 408px;
+    height: 440px;
+    background-color: beige;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.featureBox img {
+    width: 336px;
+    height: 336px;
+    margin: 0;
+}
+
+.featureBox p {
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+header {
+    background-color: aliceblue;
+    margin: 0;
+    padding-top: 30px;
+    /* display: flex; */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    padding-left: 30px;
+    display: inline;
+    justify-content: end;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.textBox {
+    width: 532px;
+    height: 168px;
+    background-color: darkgray;
+    padding: 24px;
+}
+
+.reviewContainer {
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: -64px;
+}
+
+.reviewerPicture {
+    width: 192px;
+    height: 192px;
+    background-color: coral;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    left: 456px;
+    bottom: 112px;
+}
+
+.reviewContainer:nth-child(odd) {
+    margin-left: 40%;
+    margin-bottom: -144px;
+}
+
+.reviewerPicture p {
+    text-align: center;
+    margin: 0 auto;
+    bottom: 24px;
+    /* position: absolute; */
+}
+
+#contactUs {
+    background-color: darkorange;
+}
+
+.contactDetailsContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contactDetailBox {
+    /* padding: 30px; */
+    margin: 30px;
+}
+
+.copyrights {
+    text-align: center;
+}
