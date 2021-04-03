@@ -357,4 +357,12 @@ li a {
         justify-content: center;
         align-items: center;
     }
+
+    header {
+        padding: 0;
+    }
+
+    header .container {
+        padding-top: 12px;
+    }
 } 
