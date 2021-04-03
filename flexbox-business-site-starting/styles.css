@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
@@ -8,15 +16,15 @@ h1 {
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 4rem;
+    line-height: 4rem;
 }
 
 h2 {
     font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 40px;
 }
 
@@ -24,8 +32,8 @@ p {
     font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     margin: 0;
 }
 
@@ -33,15 +41,16 @@ p {
     font-family: Ubuntu;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75rem;
+    line-height: 1rem;
 }
 
 .container {
-    width: 1272px;
+    max-width: 1272px;
     margin: 0 auto;
     padding-left: 32px;
     padding-right: 32px;
+    flex-wrap: wrap;
 }
 
 header .container {
@@ -51,7 +60,6 @@ header .container {
     padding-top: 32px;
 
 }
-
 
 button {
     background-color: #4CAF50; /* Green */
@@ -112,12 +120,17 @@ header .container h2{
 
 .featureBoxesContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .featureBox {
-    width: 408px;
-    height: 440px;
+    flex-basis: 386px;
     background-color: beige;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 0;
     margin-left: 24px;
     display: flex;
     align-items: center;
@@ -126,16 +139,20 @@ header .container h2{
     padding: 24px;
 }
 
+.featureBox:first-child {
+    margin-left: 0;
+}
+
 .featureBox img {
-    width: 336px;
+    width: 100%;
     height: 336px;
     margin: 0;
+    padding: 16px;
 
 }
 
 .featureBox p {
     text-align: center;
-    padding-top: 24px;
     padding-bottom: 0;
     margin: 0;
 }
@@ -213,15 +230,131 @@ li a {
 
 .contactDetailsContainer {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
 }
 
 .contactDetailBox {
-    /* padding: 30px; */
     margin: 30px;
 }
 
 .copyrights {
     text-align: center;
 }
+
+
+@media screen and (max-width: 859px) {
+    .featureBox:first-child {
+        margin-left: 24px;
+    }
+}
+
+@media screen and (max-width: 593px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: block;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .banner .container {
+        display: block;
+        padding-bottom: 96px;
+        padding-top: 96px;
+    }
+    .left {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .right {
+        width: 100%;
+        height: 372px;
+        margin: 0;
+    }
+
+    .featureBox {
+        margin-left: 0;
+    }
+
+    .featureBox:first-child {
+        margin-left: 0;
+    }
+
+    .reviewContainer {
+        position: relative;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .reviewContainer:nth-child(odd) {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .textBox {
+        width: 100%;
+        height: auto;
+        background-color: darkgray;
+        padding: 24px;
+        padding-bottom: 96px;
+    }
+
+    .reviewerPicture {
+        width: 192px;
+        height: 192px;
+        background-color: coral;
+        border-radius: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px;
+        right: 0;
+        top: -72px;
+        left:0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    .contactDetailBox {
+        text-align: center;
+    }
+
+    .banner .container {
+        display: flex;
+        padding-bottom: 12px;
+        padding-top: 12px;
+    }
+
+    button {
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px auto;
+        cursor: pointer;
+      }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} 
