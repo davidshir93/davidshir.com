@@ -24,7 +24,10 @@ li {
 }
 
 header {
-    height: 80px;
+    height: 128px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 h1, h2 {
@@ -32,8 +35,13 @@ h1, h2 {
     font-weight: 500;
 }
 
+h2 {
+}
+
 p {
     margin: 16px 0;
+    color:rgb(199, 199, 199)
+
 }
 
 img {
@@ -43,10 +51,37 @@ img {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    /* overflow: auto; */
+    padding: 0 32px;
 }
 
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.motionDesign.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.topLink {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px #1A1A1A solid;
+}
+
+.topLink:hover {
+    border-bottom: 2px rgb(217, 155, 255) solid;
+}
+
+.projectContainer {
+    width: calc(50% - 2.5px);
+    height: 300px;
+}
+
+.projectContainer h2, .projectContainer p {
+    text-align: center;
+    /* opacity: 0; */
 }
