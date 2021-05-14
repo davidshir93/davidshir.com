@@ -57,10 +57,10 @@ img {
 }
 
 .container {
-    max-width: 1560px;
+    max-width: 1592px;
     margin: 0 auto;
     /* overflow: auto; */
-    padding: 0 32px;
+    padding: 0 64px;
     transition: all .3s ease-in-out;
 }
 
@@ -100,9 +100,10 @@ img {
     /* width: 100%; */
     height: calc(25vw);
     max-height: 400px;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-clip: border-box;
     transition: all .3s ease-in-out;
 
 }
@@ -144,7 +145,7 @@ img {
 }
 
 .metropolis {
-    background-color: url("assets/Metropolis-and-Mental-Life/main.jpg");
+    background-image: url("assets/Metropolis-and-Mental-Life/main.jpg");
 }
 
 .london {
@@ -210,5 +211,12 @@ img {
     .projectContainer {
         height: calc(50vw);
     }
-    
+    nav ul li {
+        display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
 }
+
