@@ -12,9 +12,29 @@
     background-color: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.project-title h1 {
+    margin: 0;
+}
+
+.project-title p {
+    margin-top: 0;
 }
 
 
+a {
+    text-decoration: none;
+}
 
 ul {
     list-style-type: none;
@@ -37,13 +57,13 @@ header {
     top: 0;
     z-index: 1;
 }
+.project-title {
+    text-align: center;
+}
 
 h1, h2 {
     margin: 32px 0;
     font-weight: 500;
-}
-
-h2 {
 }
 
 p {
@@ -68,7 +88,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    transition: all .3s ease-in-out;
+    /* transition: all .3s ease-in-out; */
 
 }
 
@@ -104,7 +124,7 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-clip: border-box;
-    transition: all .3s ease-in-out;
+    /* transition: all .3s ease-in-out; */
 
 }
 
@@ -176,28 +196,43 @@ img {
     background-image: url("assets/Frozen/frames/1.png");
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
+.frames {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
+.metropolisFrames {
+    height: calc(20vw);
+    max-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-repeat: no-repeat;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+.metropolisFrames.f01 {
+    
+    background-image: url("assets/Metropolis-and-Mental-Life/03.jpg");
+}
+.metropolisFrames.f02 {
+    background-image: url("assets/Metropolis-and-Mental-Life/02.jpg");
+}
+.metropolisFrames.f03 {
+    background-image: url("assets/Metropolis-and-Mental-Life/05.jpg");
+}
+.metropolisFrames.f04 {
+    background-image: url("assets/Metropolis-and-Mental-Life/06.jpg");
+}
+.metropolisFrames.f05 {
+    background-image: url("assets/Metropolis-and-Mental-Life/08.jpg");
+}
+.metropolisFrames.f06 {
+    background-image: url("assets/Metropolis-and-Mental-Life/07.jpg");
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -226,9 +261,14 @@ img {
         margin: 0 auto;
         padding: 0 16px;
     }
-    .grid {
+    .grid, .frames {
         grid-template-columns: 1fr;
     }
+
+    .metropolisFrames {
+        height: calc(40vw);
+    }
+
     .projectContainer {
         height: calc(50vw);
     }
