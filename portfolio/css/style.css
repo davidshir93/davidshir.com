@@ -15,6 +15,10 @@
     font-size: 16px;
 }
 
+body {
+    margin-bottom: 80px;
+}
+
 h1 {
     font-size: 2rem;
 }
@@ -84,6 +88,14 @@ img {
     transition: all .3s ease-in-out;
 }
 
+.about {
+    max-width: 800px;
+}
+
+.about p {
+    font-size: 20px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -99,6 +111,11 @@ img {
     align-items: center;
 }
 
+button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+}
 
 
 .motionDesign.flex {
@@ -165,35 +182,35 @@ img {
 }
 
 .metropolis {
-    background-image: url("assets/Metropolis-and-Mental-Life/main.jpg");
+    background-image: url("../assets/Metropolis-and-Mental-Life/main.jpg");
 }
 
 .london {
-    background-image: url("assets/London-icons/main.png");
+    background-image: url("../assets/London-icons/main.png");
 }
 
 .temperamenter {
-    background-image: url("assets/Temperamenter/main.png");
+    background-image: url("../assets/Temperamenter/main.png");
 }
 
 .lifebefore {
-    background-image: url("assets/Life-Before-Us/main.png");
+    background-image: url("../assets/Life-Before-Us/main.png");
 }
 
 .camping {
-    background-image: url("assets/Camping/main.png");
+    background-image: url("../assets/Camping/main.png");
 }
 
 .pain {
-    background-image: url("assets/Pain/main.png");
+    background-image: url("../assets/Pain/main.png");
 }
 
 .lucy {
-    background-image: url("assets/Lusi/vlcsnap-2020-08-08-10h07m24s069.png");
+    background-image: url("../assets/Lusi/vlcsnap-2020-08-08-10h07m24s069.png");
 }
 
 .frozen {
-    background-image: url("assets/Frozen/frames/1.png");
+    background-image: url("../assets/Frozen/frames/1.png");
 }
 
 .frames {
@@ -215,22 +232,22 @@ img {
 
 .metropolisFrames.f01 {
     
-    background-image: url("assets/Metropolis-and-Mental-Life/03.jpg");
+    background-image: url("../assets/Metropolis-and-Mental-Life/03.jpg");
 }
 .metropolisFrames.f02 {
-    background-image: url("assets/Metropolis-and-Mental-Life/02.jpg");
+    background-image: url("../assets//Metropolis-and-Mental-Life/02.jpg");
 }
 .metropolisFrames.f03 {
-    background-image: url("assets/Metropolis-and-Mental-Life/05.jpg");
+    background-image: url("../assets//Metropolis-and-Mental-Life/05.jpg");
 }
 .metropolisFrames.f04 {
-    background-image: url("assets/Metropolis-and-Mental-Life/06.jpg");
+    background-image: url("../assets/Metropolis-and-Mental-Life/06.jpg");
 }
 .metropolisFrames.f05 {
-    background-image: url("assets/Metropolis-and-Mental-Life/08.jpg");
+    background-image: url("../assets//Metropolis-and-Mental-Life/08.jpg");
 }
 .metropolisFrames.f06 {
-    background-image: url("assets/Metropolis-and-Mental-Life/07.jpg");
+    background-image: url("../assets/Metropolis-and-Mental-Life/07.jpg");
 }
 
 .topnav {

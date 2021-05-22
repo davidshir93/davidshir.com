@@ -1,0 +1,34 @@
+
+.about form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    border-radius: 8px;
+}
+
+form * {
+    display: block;
+    width: 100%;
+    
+}
+
+form input, form textarea, form textarea:focus {
+    padding: 16px;
+    border: none;
+    background-color: rgb(75, 75, 75);
+}
+
+.about img {
+    border-radius: 100%;
+    /* aspect-ratio: 1; */
+    width: 35%;
+    height: 35%;
+    margin: 0 auto;
+    display: block;
+}
+
+input[type="submit"] {
+    width: 25%;
+}
