@@ -220,7 +220,7 @@ button {
     margin-top: 8px;
 }
 
-.metropolisFrames {
+.metropolisFrames, .temperFrames, .lifebeforeFrames, .frozenFrames {
     height: calc(20vw);
     max-height: 300px;
     background-size: cover;
@@ -230,8 +230,11 @@ button {
     background-repeat: no-repeat;
 }
 
+.temperFrames , .lifebeforeFrames, .frozenFrames{
+    max-height: 400px;
+}
+
 .metropolisFrames.f01 {
-    
     background-image: url("../assets/Metropolis-and-Mental-Life/03.jpg");
 }
 .metropolisFrames.f02 {
@@ -249,6 +252,72 @@ button {
 .metropolisFrames.f06 {
     background-image: url("../assets/Metropolis-and-Mental-Life/07.jpg");
 }
+
+.lifebeforeFrames.f01 {
+    background-image: url("../assets/Life-Before-Us/frames/1.png");
+}
+.lifebeforeFrames.f02 {
+    background-image: url("../assets/Life-Before-Us/frames/2.png");
+}
+.lifebeforeFrames.f03 {
+    background-image: url("../assets/Life-Before-Us/frames/3.png");
+}
+.lifebeforeFrames.f04 {
+    background-image: url("../assets/Life-Before-Us/frames/4.png");
+}
+.lifebeforeFrames.f05 {
+    background-image: url("../assets/Life-Before-Us/frames/5.png");
+}
+.lifebeforeFrames.f06 {
+    background-image: url("../assets/Life-Before-Us/frames/6.png");
+}
+.lifebeforeFrames.f07 {
+    background-image: url("../assets/Life-Before-Us/frames/7.png");
+}
+.lifebeforeFrames.f08 {
+    background-image: url("../assets/Life-Before-Us/frames/8.png");
+}
+
+
+.temperFrames.f01 {
+    background-image: url("../assets/Temperamenter/frames/1.png");
+}
+.temperFrames.f02 {
+    background-image: url("../assets/Temperamenter/frames/2.png");
+}
+.temperFrames.f03 {
+    background-image: url("../assets/Temperamenter/frames/3.png");
+}
+.temperFrames.f04 {
+    background-image: url("../assets/Temperamenter/frames/4.png");
+}
+.temperFrames.f05 {
+    background-image: url("../assets/Temperamenter/frames/5.png");
+}
+.temperFrames.f06 {
+    background-image: url("../assets/Temperamenter/frames/6.png");
+}
+.temperFrames.f07 {
+    background-image: url("../assets/Temperamenter/frames/7.png");
+}
+.temperFrames.f08 {
+    background-image: url("../assets/Temperamenter/frames/8.png");
+}
+
+
+.frozenFrames.f01 {
+    background-image: url("../assets/Frozen/frames/1.png");
+}
+.frozenFrames.f02 {
+    background-image: url("../assets/Frozen/frames/2.png");
+}
+.frozenFrames.f03 {
+    background-image: url("../assets/Frozen/frames/3.png");
+}
+.frozenFrames.f04 {
+    background-image: url("../assets/Frozen/frames/4.png");
+}
+
 
 .topnav {
     overflow: hidden;
@@ -284,6 +353,11 @@ button {
 
     .metropolisFrames {
         height: calc(40vw);
+    }
+
+    .temperFrames , .lifebeforeFrames, .frozenFrames{
+        height: calc(60vw);
+        max-height: 400px;
     }
 
     .projectContainer {
