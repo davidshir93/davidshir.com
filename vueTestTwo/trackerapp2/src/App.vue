@@ -1,17 +1,64 @@
 <template>
   <div class="container">
     <HeaderMe title="Tasks Tracker"/>
+    <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
   </div>
 </template>
 
 <script>
 import HeaderMe from './components/HeaderMe'
+import Tasks from './components/Tasks'
 
 export default {
   name: "App",
   components: {
     HeaderMe,
+    Tasks,
   },
+  data() {
+    return {
+      tasks: []
+    }
+  },
+  methods: {
+    deleteTask(id) {
+      console.log('task', id);
+      if (confirm('Delete task?')) {
+        this.tasks = this.tasks.filter((task) => task.id !== id);
+      };
+    },
+    toggleReminder(id) {
+      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task);
+    }
+  },
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: 'Doctors Appointment',
+        day: 'March 1st at 2:30pm',
+        reminder: true,
+      },
+      {
+        id: 2,
+        text: 'Do Workout',
+        day: 'March 4st at 2:30pm',
+        reminder: false,
+      },
+      {
+        id: 3,
+        text: 'Have Sex',
+        day: 'March 7st at 2:30pm',
+        reminder: true,
+      },
+      {
+        id: 4,
+        text: 'Eat Lunch',
+        day: 'March 9st at 2:30pm',
+        reminder: false,
+      }
+    ]
+  }
 };
 </script>
 
