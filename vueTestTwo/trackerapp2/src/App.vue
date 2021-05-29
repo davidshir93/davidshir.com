@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <HeaderMe title="Tasks Tracker"/>
+    <HeaderMe @toggle-add-task="toggleAddTask" title="Tasks Tracker" :showAddTask="showAddTask" />
+    <div v-if="showAddTask">
+      <AddTask @add-task="addTask" />
+    </div>
     <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
   </div>
 </template>
@@ -8,19 +11,28 @@
 <script>
 import HeaderMe from './components/HeaderMe'
 import Tasks from './components/Tasks'
+import AddTask from "./components/AddTask";
 
 export default {
   name: "App",
   components: {
     HeaderMe,
     Tasks,
+    AddTask
   },
   data() {
     return {
-      tasks: []
+      tasks: [],
+      showAddTask: false
     }
   },
   methods: {
+    toggleAddTask() {
+      this.showAddTask = !this.showAddTask;
+    },
+    addTask(newTask) {
+      this.tasks = [...this.tasks, newTask]
+    },
     deleteTask(id) {
       console.log('task', id);
       if (confirm('Delete task?')) {
