@@ -85,7 +85,6 @@ img {
     margin: 0 auto;
     /* overflow: auto; */
     padding: 0 64px;
-    transition: all .3s ease-in-out;
 }
 
 .about {
@@ -104,6 +103,9 @@ img {
     margin-top: 8px;
 }
 
+#zeroMarginTop {
+    margin-top: 0px;
+}
 
 .flex {
     display: flex;
@@ -232,12 +234,18 @@ button {
     gap: 8px;
 }
 
-.gifsFrames {
-    background: grey;
+.campingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 8px;
+}
+
+.gifsFrames, .campingFrames {
     display: flex;
 }
 
-.gifsFrames::before {
+.gifsFrames::before, .campingFrames::before {
     content: "";
     display: block;
     height: 0;
@@ -245,9 +253,7 @@ button {
     padding-bottom: calc(1 * 100%);
 }
 
-.metropolisFrames, .temperFrames, .lifebeforeFrames, .frozenFrames, .gifsFrames {
-    /* height: calc(20vw);
-    max-height: 300px; */
+.metropolisFrames, .temperFrames, .lifebeforeFrames, .frozenFrames, .gifsFrames, .campingFrames {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -383,6 +389,17 @@ button {
 .gifsFrames.f12 {
     background-image: url("../assets/gifs/12-lettering.gif");
 }
+
+.campingFrames.f01 {
+    background-image: url("../assets/Camping/frames/1.png");
+}
+.campingFrames.f02 {
+    background-image: url("../assets/Camping/frames/2.png");
+}
+.campingFrames.f03 {
+    background-image: url("../assets/Camping/frames/3.png");
+}
+
 
 .topnav {
     overflow: hidden;
