@@ -115,7 +115,7 @@ img {
 button {
     color: var(--accent-color);
     padding: 8px 16px;
-    border-radius: 100px;
+    border-radius: 4px;
     cursor: pointer;
     border: var(--accent-color) 1px solid;
     transition: transform 150ms ease-out;
@@ -123,6 +123,8 @@ button {
 
 button:hover {
     transform: scale(1.05);
+    color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
 button:active {
@@ -145,13 +147,46 @@ button:active {
     margin-top: -32px;
 }
 
-.topLink, #email {
+.others {
+    margin-top: 64px;
+}
+
+#socialLinks a svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline;
+    padding-right: 8px;
+    border-radius: 0px;
+}
+
+svg path {
+    transition: all 150ms ease-in-out;
+}
+
+#socialLinks a svg:hover path {
+    fill: var(--accent-color);
+}
+
+#socialLinks {
+    margin-bottom: 160px;
+}
+
+.topLink {
     transition: all 0.3s ease-in-out;
     border-bottom: 2px #1A1A1A solid;
 }
 
-.topLink:hover, #email:hover {
+.topLink:hover {
     border-bottom: 2px var(--accent-color) solid;
+}
+
+#email {
+    transition: all 150ms ease-in-out;
+    color: var(--text-color);
+}
+
+#email:hover {
+    color: var(--accent-color);
 }
 
 .projectContainer {
