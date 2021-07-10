@@ -83,7 +83,6 @@ img {
 .container {
     max-width: 1592px;
     margin: 0 auto;
-    /* overflow: auto; */
     padding: 0 64px;
 }
 
@@ -114,7 +113,6 @@ img {
 }
 
 button {
-    /* background-color: var(--accent-color); */
     color: var(--accent-color);
     padding: 8px 16px;
     border-radius: 100px;
@@ -131,20 +129,28 @@ button:active {
     transform: scale(0.95);
 }
 
-
-
 .motionDesign.flex {
     display: flex;
     flex-wrap: wrap;
 
 }
 
-.topLink {
+#feelFree {
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+#email {
+    display: inline;
+    margin-top: -32px;
+}
+
+.topLink, #email {
     transition: all 0.3s ease-in-out;
     border-bottom: 2px #1A1A1A solid;
 }
 
-.topLink:hover {
+.topLink:hover, #email:hover {
     border-bottom: 2px var(--accent-color) solid;
 }
 
