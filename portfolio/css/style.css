@@ -114,10 +114,23 @@ img {
 }
 
 button {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    /* background-color: var(--accent-color); */
+    color: var(--accent-color);
     padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: var(--accent-color) 1px solid;
+    transition: transform 150ms ease-out;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
 
 
 .motionDesign.flex {
