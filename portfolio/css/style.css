@@ -478,6 +478,7 @@ svg path {
   }
 
 @media only screen and (max-width: 768px) {
+
     .container {
         max-width: 752px;
         margin: 0 auto;
@@ -487,18 +488,22 @@ svg path {
     nav ul li {
         display: none;
     }
+
     .topnav a.icon {
       float: right;
       display: block;
     }
+
     .topnav.responsive {
         position: relative;
     }
+
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
+
     .topnav.responsive a {
       float: none;
       display: block;
