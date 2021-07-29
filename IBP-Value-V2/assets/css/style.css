@@ -156,22 +156,31 @@ h1 {
 }
 
 .changeShippingCost {
-    display: none;
-    position: relative;
+    /* display: none; */
+    display: block;
+    position: absolute;
     background-color: #F6F6F6;
-    width: 250px;
-    transform: rotate(-15deg);
+    width: 287px;
+    height: 126px;
+    transform: rotate(15deg);
     left: 400px;
-    top: -90px;
+    top: -70px;
     padding: 24px;
+    opacity: 0;
+    border: 1px solid #000000;
+    transition: all 200ms ease-in-out;
+}
+
+form, input {
 }
 
 .revenue .container {
     position: absolute;
 }
 
-.revenue .container:hover .changeShippingCost{
-    display: block;
+.revenue .container h1:hover .changeShippingCost{
+    opacity: 1;
+    transform: rotate(-15deg);
 }
 
 input, input:active, input:checked, input:focus, input:focus-visible, input:focus-within {
@@ -180,6 +189,7 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
     font-size: 36px;
     width: 100%;
     overflow: hidden;
+    z-index: 15;
 }
 
 .share {
