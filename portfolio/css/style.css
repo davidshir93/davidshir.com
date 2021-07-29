@@ -488,33 +488,26 @@ svg path {
     }
 
     header {
-        position: fixed;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        width: 100%;
+
+        height: 10vh;
+
         display: flex;
         flex-direction: column;
         justify-content: center!important;
-        display: none!important;
+        /* display: none!important; */
     }
 
-    header .flex {
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
+    header.flex {
         background-color: var(--primary-color);
-        align-items: center;
-
+        display: block;
     }
 
     header a {
-        display: none;
+        display: inline;
     }
 
     .topnav a {
-        
-        display: block;
+        display: inline-block;
         color: #f2f2f2;
         text-align: center;
         text-decoration: none;
@@ -524,14 +517,48 @@ svg path {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        height: 50vh;
+        height: 75vh;
+        position: fixed;
+        left: 0;
+        top: 10vh;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 300ms ease-out;
     }
+
+    .topnav.open {
+        clip-path: circle(1350px at 90% -10%);
+        -webkit-clip-path: circle(1350px at 90% -10%);
+    }
+
     .topLink {
         position: relative;
         background-color: var(--primary-color);
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+    
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: #f2f2f2;
+        margin: 4px;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        cursor: pointer;
+        z-index: 2;
     }
 }
 

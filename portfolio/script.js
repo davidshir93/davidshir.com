@@ -6,3 +6,10 @@ console.info(
   "davidshir93@gmail.com"
 );
 
+const hamburger = document.querySelector('.hamburger');
+const topnav = document.querySelector('.topnav');
+const links = document.querySelectorAll('.topLink li');
+
+hamburger.addEventListener('click', () => {
+  topnav.classList.toggle('open');
+})
