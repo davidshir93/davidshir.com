@@ -488,13 +488,11 @@ svg path {
     }
 
     header {
-
-        height: 10vh;
-
+        /* height: 10vh; */
+        position: sticky;
         display: flex;
         flex-direction: column;
         justify-content: center!important;
-        /* display: none!important; */
     }
 
     header.flex {
@@ -556,9 +554,13 @@ svg path {
     .hamburger {
         position: absolute;
         right: 16px;
-        top: 16px;
+        top: 40px;
         cursor: pointer;
         z-index: 2;
+    }
+
+    h1 {
+        padding-top: 24px;
     }
 }
 
