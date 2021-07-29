@@ -42,8 +42,9 @@ for (let i = 0; i < 35; i++) {
     // newCircle.style.width = `100*${scaleFactor}px`;
     newCircle.style.height = `100px`;
     newCircle.style.width = `100px`;
+    newCircle.style.boxShadow = '1px 1px 0px #000000';
     newCircle.style.transform = `scale(${scaleFactor})`
-    newCircle.innerHTML=`<h2 style="text-shadow: 2px 2px 0px #000000; color: #FFFFFF;">${Math.floor(Math.random()*15)}%</h2>`;
+    newCircle.innerHTML=`<h2 style="text-shadow: 1px 1px 0px #000000; color: #FFFFFF;">${Math.floor(Math.random()*15)}%</h2>`;
     newCircles.push(newCircle);
 }
 

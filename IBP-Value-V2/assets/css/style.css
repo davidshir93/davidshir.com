@@ -70,10 +70,11 @@ h1 {
     height: 350px;
     transform: scale(0);
     z-index: 20;
+    box-shadow: 4px 4px 0px #000000;
 }
 
 .avgPrecentage h1 {
-    text-shadow: 2px 2px 0px #000000;
+    text-shadow: 4px 4px 0px #000000;
     color: #FFFFFF;
 }
 
