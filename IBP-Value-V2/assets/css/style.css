@@ -98,6 +98,7 @@ h1 {
 .revenue {
     z-index: 7;
     background-color: #FFDF5A;
+    height: 85vh;
 }
 
 .circlesContainer {
@@ -151,7 +152,7 @@ h1 {
 .revenue img {
     position: absolute;
     transform: scale(.7);
-    z-index: 3;
+    z-index: 0;
 }
 
 .changeShippingCost {
@@ -179,4 +180,37 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
     font-size: 36px;
     width: 100%;
     overflow: hidden;
+}
+
+.share {
+    background-color: #FFDF5A;
+    height: 15vh;
+    display: flex;
+}
+
+.shareBtn {
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1.5px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 5.5px 5.5px 0px #000000;
+    border-radius: 95px;
+    font-size: 18px;
+    line-height: 100%;
+    /* identical to box height, or 18px */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 16px;
+}
+
+footer {
+    height: 10vh;
+    margin: 0 auto;
+}
+
+footer .container p {
+    margin: 24px auto;
+    text-align: center;
+    width: 50%;
 }
