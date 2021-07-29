@@ -1,9 +1,6 @@
-const { default: gsap } = require("gsap/all");
-
 const brandColors = ['#85A6FC', '#FC85AD', '#FF4E36', '#0BD18B', '#0BD18B', '#FC85AD', '#FC85AD', '#FF4E36', '#0BD18B'];
 
 const getRandomBrandColor = () => brandColors[Math.floor(Math.random() * brandColors.length)];
-
 
 gsap.to(".opener", {
     scrollTrigger: {
@@ -13,6 +10,17 @@ gsap.to(".opener", {
     },
     transform: 'scale(.5)',
     duration: 2
+})
+
+gsap.to(".avgPrecentage", {
+  scrollTrigger: {
+    trigger: ".avgPrecentage",
+    markers: true
+  },
+  delay: 3,
+  transform: 'scale(1.5)',
+  ease: "power2.out",
+  duration: .5
 })
 
 let precentages = document.querySelector('.circlesContainer');
@@ -39,7 +47,6 @@ for (let i = 0; i < 35; i++) {
     newCircles.push(newCircle);
 }
 
-
 function start(counter){
     if(counter < 34){
       setTimeout(function(){
@@ -51,7 +58,3 @@ function start(counter){
   }
 
 setTimeout ((start(0)), 3000);
-
-// gsap.from('.newCircle', { duration: 1, y: '100%' });
-
-// gsap.to('.newCircle', { duration: 1, y: '0%' });
