@@ -23,6 +23,13 @@ gsap.to(".avgPrecentage", {
   duration: .5
 })
 
+gsap.to(".newCircle", {
+  stagger: .1,
+  transform: 'scale(1)',
+  ease: "power2.out",
+  duration: .2
+})
+
 let precentages = document.querySelector('.circlesContainer');
 
 let newCircles = [];
@@ -37,7 +44,7 @@ for (let i = 0; i < 35; i++) {
     newCircle.style.justifyContent = "center";
     newCircle.style.position = "relative";
     newCircle.style.padding = `${Math.random()*500} ${Math.random()*500} ${Math.random()*500} ${Math.random()*500}` 
-    const scaleFactor = Math.random()*4;
+    const scaleFactor = Math.random()*3;
     // newCircle.style.height = `100*${scaleFactor}px`;
     // newCircle.style.width = `100*${scaleFactor}px`;
     newCircle.style.height = `100px`;

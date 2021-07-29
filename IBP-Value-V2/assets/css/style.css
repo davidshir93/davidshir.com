@@ -128,12 +128,13 @@ h1 {
     position: relative;
 }
 
-.container.below {
+.container .below {
     text-align: left;
-    position: relative;
+    position: absolute;
     bottom: 1080px;
+    margin: 0 auto;
 }
 
-.below>h1 {
+.below h1 {
     text-align: left!important;
 }
