@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+    background-color: #F6F6F6;
+    height: 300vh;
+}
+
+.container {
+    max-width: 1344px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100%;
+    /* or 100px */
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.opener, .percentages, .belowMax, .revenue {
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opener {
+    height: 125vh; 
+    background-color: #FFDF5A;
+    border-radius: 100%;
+    transform: scale(2);
+    margin: 0 auto;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.opener h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.opener {
+    z-index: 10;
+}
+
+.percentages {
+    z-index: 9;
+    position: relative;
+}
+
+.percentages h1 {
+    z-index: 11;
+}
+
+.belowMax {
+    z-index: 8;
+}
+
+.revenue {
+    z-index: 7;
+}
+
+.circlesContainer {
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* @keyframes animateIn {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1);
+    }
+} */
+
+.newCircle {
+    transform: scale(0);
+    transition: all 300ms ease-out;
+    animation: animateIn 300ms ease-out;
+}
+
+.newCircle h2 {
+    border: 1px solid #000000;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+.belowMax {
+    background-color: #897AC6;
+    position: relative;
+}
+
+.container.below {
+    text-align: left;
+    position: relative;
+    bottom: 1080px;
+}
+
+.below>h1 {
+    text-align: left!important;
+}
