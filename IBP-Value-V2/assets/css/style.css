@@ -31,6 +31,10 @@ h1 {
     color: #000000;
 }
 
+.miniP {
+    font-size: 12px;
+}
+
 .opener, .percentages, .percentages02, .belowMax, .revenue {
     height: 150vh;
     display: flex;
@@ -93,6 +97,7 @@ h1 {
 
 .revenue {
     z-index: 7;
+    background-color: #FFDF5A;
 }
 
 .circlesContainer {
@@ -102,15 +107,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
 }
-
-/* @keyframes animateIn {
-    from {
-        transform: scale(0)
-    }
-    to {
-        transform: scale(1);
-    }
-} */
 
 .newCircle {
     transform: scale(0);
@@ -137,4 +133,50 @@ h1 {
 
 .below h1 {
     text-align: left!important;
+}
+
+.summaryCards {
+    display: flex;
+}
+
+.summaryCard {
+    padding: 24px;
+    margin: 24px;
+    background: #F6F6F6;
+    border: 1.5px solid #000000;
+    z-index: 20;
+    width: 200px;
+}
+
+.revenue img {
+    position: absolute;
+    transform: scale(.7);
+    z-index: 3;
+}
+
+.changeShippingCost {
+    display: none;
+    position: relative;
+    background-color: #F6F6F6;
+    width: 250px;
+    transform: rotate(-15deg);
+    left: 400px;
+    top: -90px;
+    padding: 24px;
+}
+
+.revenue .container {
+    position: absolute;
+}
+
+.revenue .container:hover .changeShippingCost{
+    display: block;
+}
+
+input, input:active, input:checked, input:focus, input:focus-visible, input:focus-within {
+    background-color: #F6F6F6;
+    border: none;
+    font-size: 36px;
+    width: 100%;
+    overflow: hidden;
 }
