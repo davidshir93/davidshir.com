@@ -6,42 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css" class="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="./assets/js/script.js" defer></script>
     <title>David Shir - Creative Front-End Developer</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Hey there! I’m David. I design, develop and animate products.</h1>
+        <div class="container">
+            <h1>Hey there! I’m David.<br> I design, develop and animate products.</h1>
+        </div>
+        <img id="toggleImg" src="./assets/svg/Toggle.svg"/>
+        <img id="checkboxImg" src="./assets/svg/Checkbox.svg"/>
     </header>
-
     <nav>
         <ul>
-            <a href="#work"><li>Work</li></a>
+            <a href="#work" class="active"><li>Work</li></a>
             <a href="#about"><li>About</li></a>
             <a href="#contact"><li>Contact</li></a>
         </ul>
     </nav>
+    <div class="navContainer container">
 
-    <section class="work">
+    </div>
+
+    <section class="work container">
 
         <h2>Work</h2>
         
         <div class="project1">
-            
+            <img src="./assets/project-images/Project-Main-Image-1.png" alt="Namogoo Platform">
+            <h1>Namogoo Platform</h1>
+            <p>Various Interactions development and design across all Namogoo’s products.</p>
+            <div class="tags">
+                <div class="tag">Web Development</div>
+                <div class="tag">CSS Animation</div>
+                <div class="tag">Vue.js</div>
+                <div class="tag">Interaction Design</div>
+                <div class="tag">Motion Design</div>
+                <div class="tag">Product Design</div>
+            </div>
         </div>
 
         <div class="project2">
-
+            <img src="./assets/project-images/Project-Main-Image-2.png" alt="Markdone Web App">
+            <h1>Markdone Web App</h1>
+            <p>This is a test for a short sentence that will get me my next job yayy</p>
+            <div class="tags">
+                <div class="tag">Web Development</div>
+                <div class="tag">CSS Animation</div>
+                <div class="tag">Vue.js</div>
+                <div class="tag">Interaction Design</div>
+                <div class="tag">Motion Design</div>
+                <div class="tag">Product Design</div>
+            </div>
         </div>
         
         <div class="project3">
-
+            <img src="./assets/project-images/Project-Main-Image-3.png" alt="3rd Web Application">
+            <h1>3rd Web Application</h1>
+            <p>This is a test for a short sentence that will get me my next job yayy</p>
+            <div class="tags">
+                <div class="tag">Web Development</div>
+                <div class="tag">CSS Animation</div>
+                <div class="tag">Vue.js</div>
+                <div class="tag">Interaction Design</div>
+                <div class="tag">Motion Design</div>
+                <div class="tag">Product Design</div>
+            </div>
         </div>
 
     </section>
 
-    <section class="about">
+    <section class="about container">
 
         <h2>About</h2>
         <p>I am specialized in front-end development, animations and micro-interactions, usually working with CSS, Vue.js, Vannila JS, HTML, P5.js, Adobe After Effects. I am trying to create unique and playful websites to provide a memorable user experience. I am always keeping an eye on performance to make sure the overall feeling stays the same on every device, mobiles included.</p>
@@ -52,7 +92,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact container">
 
         <h2>Contact</h2>
         <p>I would be happy to hear from you</p>
@@ -63,7 +103,7 @@
 
     </section>
 
-    <footer>
+    <footer class="container">
         <p class="legal">Designed, Developed and Animated by David Shir, Copyright Ⓒ 2021 David Shir</p>
     </footer>
     
