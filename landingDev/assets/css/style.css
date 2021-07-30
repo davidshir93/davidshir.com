@@ -45,10 +45,11 @@ p {
     font-size: 12px;
     line-height: 16px;
     color: var(--C-Pink);
-    display: inline;
+    display: inline-block;
     padding: 2px 12px 4px;
     border: 1px solid var(--C-Pink);
     border-radius: 247px;
+    margin: 4px 0;
 }
 
 /* Site Container and Grids */
@@ -71,6 +72,7 @@ header {
 header h1 {
     text-align: center;
     z-index: 2;
+    padding-bottom: 48px;
 }
 
 #toggleImg {
@@ -91,6 +93,8 @@ header h1 {
 
 nav {
     position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
     bottom: 16px;
     background: var(--B-Purple);
@@ -114,4 +118,59 @@ nav ul {
 
 ul a.active {
     background: var(--E-AlmostWhite);
+}
+
+/* Projects */
+
+.project {
+    display: flex;
+    padding: 24px 0;
+    margin: 48px 0;
+}
+
+.project:nth-child(3) {
+    flex-direction: row-reverse;
+}
+
+.projectDetails {
+    padding: 24px;
+}
+
+/* About */
+
+.about {
+    height: 100vh;
+}
+
+/* Contact */
+
+.contact {
+    height: 80vh;
+}
+
+#socialLinks a svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline;
+    padding-right: 8px;
+    border-radius: 0px;
+}
+
+svg path {
+    transition: all 150ms ease-in-out;
+    fill: var(--B-Purple);
+}
+
+#socialLinks a svg:hover path {
+    fill: var(--C-Pink);
+}
+
+#socialLinks {
+    margin-bottom: 160px;
+}
+
+/* Footer */
+
+.legal {
+    text-align: center;
 }
