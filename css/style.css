@@ -497,7 +497,7 @@ svg path {
     }
 
     header {
-        /* height: 10vh; */
+        height: 96px;
         position: sticky;
         display: flex;
         flex-direction: column;
@@ -573,3 +573,12 @@ svg path {
     }
 }
 
+@media only screen and (max-width: 460px) {
+    .frames {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
