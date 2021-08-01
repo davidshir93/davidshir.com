@@ -149,6 +149,15 @@ p {
     text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;;
 }
 
+#inline {
+    display: inline-block;
+    color: var(--NMG-M1-Purple);
+}
+
+h3#inline {
+    margin-right: 16px;
+}
+
 .belowMax {
     height: 150vh;
     display: flex;
@@ -172,6 +181,10 @@ p {
     text-align: left;
     display: block;
     max-width: 1344px;
+    color: var(--NMG-Gray);
+}
+.belowMax .container h1 {
+    text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;
 }
 
 .below h1 {
