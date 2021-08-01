@@ -4,12 +4,13 @@ const getRandomBrandColor = () => brandColors[Math.floor(Math.random() * brandCo
 
 gsap.to(".opener", {
     scrollTrigger: {
-        trigger: ".precentages",
+        trigger: ".opener",
         toggleActions: "play none none reverse",
+        start: "center center",
         markers: true,
+        scrub: true,
     },
-    transform: 'scale(.5)',
-    duration: 2
+    transform: 'scale(.3)'
 })
 
 gsap.to(".avgPrecentage", {
@@ -28,6 +29,28 @@ gsap.to(".newCircle", {
   transform: 'scale(1)',
   ease: "power2.out",
   duration: .2
+})
+
+gsap.to(".revenue img", {
+  scrollTrigger: {
+      trigger: ".revenue",
+      end: "center center",
+      toggleActions: "play none none reverse",
+      markers: true,
+      scrub: true,
+  },
+  transform: 'scale(.7) rotate(0deg) translateY(0%) translateX(0%)',
+})
+
+gsap.to(".summaryCard", {
+  scrollTrigger: {
+      trigger: ".summaryCard",
+      toggleActions: "play none none reverse",
+      markers: true,
+  },
+  stagger: 0.2,
+  transform: 'translateY(0%)',
+  opacity: '1',
 })
 
 let precentages = document.querySelector('.circlesContainer');
