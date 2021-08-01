@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+:root {
+    --NMG-Black: #000000;
+    --NMG-Yellow: #FFDF5A;
+    --NMG-Gray: #F6F6F6;
+    --NMG-M1-Purple: #897AC6;
+    --NMG-M2-Blue: #85A6FC;
+    --NMG-M3-Pink: #FC85AD;
+    --NMG-M4-Red: #FF4E36;
+    --NMG-M5-Green: #0BD18B;
+}
 
 * {
     margin: 0;
@@ -9,7 +21,7 @@
 
 
 body {
-    background-color: #F6F6F6;
+    background-color: var(--NMG-Gray);
     height: 300vh;
 }
 
@@ -28,7 +40,28 @@ h1 {
     text-align: center;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: #000000;
+    color: var(--NMG-Black);
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 25px;
+    line-height: 120%;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
 }
 
 .miniP {
@@ -44,7 +77,7 @@ h1 {
 
 .opener {
     height: 125vh; 
-    background-color: #FFDF5A;
+    background-color: var(--NMG-Yellow);
     border-radius: 100%;
     transform: scale(2);
     margin: 0 auto;
@@ -66,7 +99,7 @@ h1 {
 }
 
 .avgPrecentage {
-    background-color: #85A6FC;
+    background-color: var(--NMG-M1-Purple);
     border-radius: 100%;
     display: flex;
     flex-direction: column;
@@ -80,9 +113,10 @@ h1 {
     box-shadow: 4px 4px 0px #000000;
 }
 
-.avgPrecentage h1 {
+.avgPrecentage h1, .avgPrecentage h4 {
     text-shadow: 4px 4px 0px #000000;
-    color: #FFFFFF;
+    color: var(--NMG-Gray);
+    text-align: center;
 }
 
 .percentages {
@@ -96,12 +130,6 @@ h1 {
 
 .belowMax {
     z-index: 8;
-}
-
-.revenue {
-    z-index: 7;
-    background-color: #FFDF5A;
-    height: 85vh;
 }
 
 .circlesContainer {
@@ -124,7 +152,7 @@ h1 {
 }
 
 .belowMax {
-    background-color: #897AC6;
+    background-color: var(--NMG-M1-Purple);
     /* position: relative; */
 }
 
@@ -145,13 +173,58 @@ h1 {
 
 .summaryCard {
     padding: 24px;
-    margin: 24px;
-    background: #F6F6F6;
-    border: 1.5px solid #000000;
+    margin-right: 24px;
+    background: var(--NMG-Gray);
+    border: 1.5px solid var(--NMG-Black);
     z-index: 20;
     width: 200px;
     transform: translateY(150%);
-    opacity: 0
+    opacity: 0;
+}
+
+.summaryCard:nth-last-child() {
+    margin-right: 0px;
+}
+
+.summaryCard h4{
+    text-shadow: 2px 2px 0px var(--NMG-Black);
+}
+
+.summaryCard:nth-child(1) h4{
+    color: var(--NMG-M2-Blue);
+}
+.summaryCard:nth-child(2) h4{
+    color: var(--NMG-M3-Pink);
+}
+.summaryCard:nth-child(3) h4{
+    color: var(--NMG-M5-Green);
+}
+
+.revenue {
+    z-index: 7;
+    background-color: var(--NMG-Yellow);
+    height: 85vh;
+}
+
+.revenue .container {
+    max-width: 1160px;
+}
+
+.revenue .container h2 {
+    color: var(--NMG-Gray);
+    text-shadow: 2px 4px 0px var(--NMG-Black);
+}
+
+.revenue .container h3 {
+    margin-top: -16px;
+}
+
+.revenue .container p {
+    margin-bottom: 24px;
+}
+
+.revenue .container {
+    margin-top: 48px;
 }
 
 .revenue img {
@@ -165,7 +238,7 @@ h1 {
     /* display: none; */
     display: block;
     position: absolute;
-    background-color: #F6F6F6;
+    background-color: var(--NMG-Gray);
     width: 287px;
     height: 126px;
     transform: rotate(15deg);
@@ -196,24 +269,24 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
 }
 
 .share {
-    background-color: #FFDF5A;
+    background-color: var(--NMG-Yellow);
     height: 15vh;
     display: flex;
 }
 
 .shareBtn {
     margin: 0 auto;
-    background: #FFFFFF;
-    border: 1.5px solid #000000;
+    background: var(--NMG-Gray);
+    border: 1.5px solid var(--NMG-Black);
     box-sizing: border-box;
-    box-shadow: 5.5px 5.5px 0px #000000;
+    box-shadow: 5.5px 5.5px 0px var(--NMG-Black);
     border-radius: 95px;
     font-size: 18px;
     line-height: 100%;
     /* identical to box height, or 18px */
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #000000;
+    color: var(--NMG-Black);
     padding: 16px;
 }
 
@@ -225,5 +298,5 @@ footer {
 footer .container p {
     margin: 24px auto;
     text-align: center;
-    width: 50%;
+    /* width: 50%; */
 }

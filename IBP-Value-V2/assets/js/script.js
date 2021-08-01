@@ -39,7 +39,7 @@ gsap.to(".revenue img", {
       markers: true,
       scrub: true,
   },
-  transform: 'scale(.7) rotate(0deg) translateY(0%) translateX(0%)',
+  transform: 'scale(.75) rotate(0deg) translateY(0%) translateX(0%)',
 })
 
 gsap.to(".summaryCard", {
@@ -74,7 +74,7 @@ for (let i = 0; i < 35; i++) {
     newCircle.style.width = `100px`;
     newCircle.style.boxShadow = '1px 1px 0px #000000';
     newCircle.style.transform = `scale(${scaleFactor})`
-    newCircle.innerHTML=`<h2 style="text-shadow: 1px 1px 0px #000000; color: #FFFFFF;">${Math.floor(Math.random()*15)}%</h2>`;
+    newCircle.innerHTML=`<h4 style="text-shadow: 1px 1px 0px #000000; color: #FFFFFF;">${Math.floor(Math.random()*15)}%</h4>`;
     newCircles.push(newCircle);
 }
 
