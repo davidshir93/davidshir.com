@@ -172,7 +172,7 @@ h3#inline {
 .belowMax .container {
     position: relative;
     text-align: left;
-    max-width: 1344px;
+    max-width: 1344px!important;
     margin: 48px 104px;
     left: 0;
 }
@@ -189,6 +189,12 @@ h3#inline {
 
 .below h1 {
     text-align: left!important;
+}
+
+#belowMaxText {
+    max-width: 1344px!important;
+
+    padding-top: 48px;
 }
 
 .summaryCards {

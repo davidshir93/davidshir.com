@@ -90,3 +90,11 @@ function start(counter){
   }
 
 setTimeout ((start(0)), 3000);
+
+ScrollTrigger.create({
+  trigger: '#belowMaxText',
+  start: "top top",
+  end: "+=800px",
+  pinSpacing: false,
+  pin: true
+})
