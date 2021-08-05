@@ -53,7 +53,7 @@ gsap.to(".cartScroll img", {
 
 gsap.to(".KPI-card", {
   scrollTrigger: {
-      trigger: ".cartScroll img",
+      trigger: ".cartScroll",
       toggleActions: "play reset none reverse",
       markers: true,
       end: "bottom center",
@@ -63,7 +63,7 @@ gsap.to(".KPI-card", {
   ease: "power2.out",
   stagger: 0.08,
   delay: 0.08,
-  transform: 'translateY(0%)',
+  transform: 'translateY(0%) scale(1) rotate(0deg)',
   opacity: '1',
 })
 

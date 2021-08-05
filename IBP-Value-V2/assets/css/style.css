@@ -238,7 +238,7 @@ h3#inline {
 
 .KPI-card {
     padding: 0 48px;
-    transform: translateY(100%);
+    transform: translateY(200%) translateX(-50%) scale(0.1) rotate(-45deg);
     opacity: 0;
 }
 
