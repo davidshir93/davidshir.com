@@ -273,7 +273,7 @@ h3#inline {
 
 .line {
     width: 100%;
-    /* border-top: 1px solid; */
+    border-top: 1px solid;
     display: block;
 }
 
