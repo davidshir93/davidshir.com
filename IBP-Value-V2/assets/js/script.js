@@ -2,6 +2,8 @@ const brandColors = ['#85A6FC', '#FC85AD', '#FF4E36', '#0BD18B', '#0BD18B', '#FC
 
 const getRandomBrandColor = () => brandColors[Math.floor(Math.random() * brandColors.length)];
 
+// Opener
+
 gsap.to(".opener", {
     scrollTrigger: {
         trigger: ".opener",
@@ -12,6 +14,8 @@ gsap.to(".opener", {
     },
     transform: 'scale(.3)'
 })
+
+// Below Max Discount
 
 gsap.to(".avgPrecentage", {
   scrollTrigger: {
@@ -30,6 +34,40 @@ gsap.to(".newCircle", {
   ease: "power2.out",
   duration: .2
 })
+
+// KPI Cards
+
+gsap.to(".cartScroll img", {
+  scrollTrigger: {
+      trigger: ".cartScroll img",
+      toggleActions: "play reset none reverse",
+      markers: true,
+      end: "bottom center",
+      // start: "top center",
+      scrub: true,
+  },
+  duration: 4.5,
+  transform: 'translateX(1400%)',
+  opacity: '1',
+})
+
+gsap.to(".KPI-card", {
+  scrollTrigger: {
+      trigger: ".cartScroll img",
+      toggleActions: "play reset none reverse",
+      markers: true,
+      end: "bottom center",
+      // start: "top center",
+      scrub: true,
+  },
+  ease: "power2.out",
+  stagger: 0.08,
+  delay: 0.08,
+  transform: 'translateY(0%)',
+  opacity: '1',
+})
+
+// Summary
 
 gsap.to(".revenue img", {
   scrollTrigger: {
@@ -53,30 +91,7 @@ gsap.to(".summaryCard", {
   opacity: '1',
 })
 
-gsap.to(".cartScroll img", {
-  scrollTrigger: {
-      trigger: ".cartScroll img",
-      toggleActions: "play reset none reverse",
-      markers: true,
-      scrub: true,
-  },
-  duration: 2.5,
-  transform: 'translateX(1400%)',
-  opacity: '1',
-})
-
-gsap.to(".KPI-card", {
-  scrollTrigger: {
-      trigger: ".cartScroll img",
-      toggleActions: "play reset none reverse",
-      markers: true,
-      scrub: true,
-  },
-  ease: "power2.out",
-  stagger: 0.08,
-  transform: 'translateY(0%)',
-  opacity: '1',
-})
+// Circles - To Be Replaced with Vue.js
 
 let precentages = document.querySelector('.circlesContainer');
 

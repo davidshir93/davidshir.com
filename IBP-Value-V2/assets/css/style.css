@@ -214,7 +214,7 @@ h3#inline {
 
 #belowMaxText {
     max-width: 1344px!important;
-
+    z-index: 15;
     padding-top: 48px;
 }
 
@@ -261,20 +261,27 @@ h3#inline {
 .cartScroll {
     position: relative;
     top: -300px;
+    overflow: hidden;
 }
 
 .cartScroll img {
     margin-bottom: -6px;
     transform: translateX(-100%);
+    overflow: hidden;
+
 }
 
 .line {
     width: 100%;
-    border-top: 1px solid;
-    display: block:
+    /* border-top: 1px solid; */
+    display: block;
 }
 
 /* Revenue + Summary Section */
+
+.revenue {
+    overflow: hidden;
+}
 
 .summaryCards {
     display: flex;
