@@ -1,3 +1,5 @@
+/* General Rules */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 
@@ -39,7 +41,7 @@ h1 {
     text-align: center;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: var(--NMG-Black);
+    /* color: var(--NMG-Black); */
 }
 
 h2 {
@@ -67,12 +69,18 @@ p {
     font-size: 12px;
 }
 
-.opener, .percentages, .percentages02, .revenue {
+.nmg-text-shadow {
+    text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;
+}
+
+.opener, .percentages, .percentages02, .revenue, .KPIs {
     height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* Open Section */
 
 .opener {
     height: 125vh; 
@@ -96,6 +104,8 @@ p {
 .opener {
     z-index: 10;
 }
+
+/* Circles Average Discount Section */
 
 .avgPrecentage {
     background-color: var(--NMG-M1-Purple);
@@ -155,6 +165,8 @@ h3#inline {
     margin-right: 16px;
 }
 
+/* Orders Below Max Section */
+
 .belowMax {
     height: 150vh;
     display: flex;
@@ -180,6 +192,7 @@ h3#inline {
     max-width: 1344px;
     color: var(--NMG-Gray);
 }
+
 .belowMax .container h1 {
     text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;}
 
@@ -192,6 +205,64 @@ h3#inline {
 
     padding-top: 48px;
 }
+
+/* KPI Cards Section */
+
+.KPIs {
+    display: block;
+}
+
+.KPIs .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.KPI-cards {
+    display: flex;
+    align-items: space-around;
+}
+
+.KPI-card {
+    padding: 0 48px;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.KPI-card h1 {
+    text-align: left;
+}
+
+.KPI-card-01 {
+    color: var(--NMG-M2-Blue);
+}
+
+.KPI-card-02 {
+    color: var(--NMG-M3-Pink);
+}
+
+.KPI-card-03 {
+    color: var(--NMG-M5-Green);
+}
+
+.cartScroll {
+    position: relative;
+    top: -300px;
+}
+
+.cartScroll img {
+    margin-bottom: -6px;
+    transform: translateX(-100%);
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid;
+    display: block:
+}
+
+/* Revenue + Summary Section */
 
 .summaryCards {
     display: flex;
@@ -319,6 +390,8 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
     color: var(--NMG-Black);
     padding: 16px;
 }
+
+/* Footer */
 
 footer {
     height: 10vh;

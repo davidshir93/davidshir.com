@@ -53,6 +53,31 @@ gsap.to(".summaryCard", {
   opacity: '1',
 })
 
+gsap.to(".cartScroll img", {
+  scrollTrigger: {
+      trigger: ".cartScroll img",
+      toggleActions: "play reset none reverse",
+      markers: true,
+      scrub: true,
+  },
+  duration: 2.5,
+  transform: 'translateX(1400%)',
+  opacity: '1',
+})
+
+gsap.to(".KPI-card", {
+  scrollTrigger: {
+      trigger: ".cartScroll img",
+      toggleActions: "play reset none reverse",
+      markers: true,
+      scrub: true,
+  },
+  ease: "power2.out",
+  stagger: 0.08,
+  transform: 'translateY(0%)',
+  opacity: '1',
+})
+
 let precentages = document.querySelector('.circlesContainer');
 
 let newCircles = [];
