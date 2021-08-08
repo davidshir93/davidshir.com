@@ -46,8 +46,8 @@ gsap.to(".cartScroll img", {
       // start: "top center",
       scrub: true,
   },
-  duration: 4.5,
-  transform: 'translateX(1400%)',
+  duration: 8.5,
+  transform: 'translateX(100vw)',
   opacity: '1',
 })
 
@@ -62,7 +62,7 @@ gsap.to(".KPI-card", {
   },
   ease: "power2.out",
   stagger: 0.08,
-  delay: 0.08,
+  delay: 1.08,
   transform: 'translateY(0%) scale(1) rotate(0deg)',
   opacity: '1',
 })
