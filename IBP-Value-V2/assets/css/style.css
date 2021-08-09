@@ -27,6 +27,13 @@ body {
     overflow-x: hidden;
 }
 
+#closeIcon {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    z-index: 25;
+}
+
 .container {
     max-width: 1344px;
     margin: 0 auto;

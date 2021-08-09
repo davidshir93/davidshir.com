@@ -9,7 +9,6 @@ gsap.to(".opener", {
         trigger: ".opener",
         toggleActions: "play none none reverse",
         start: "center center",
-        markers: true,
         scrub: true,
     },
     transform: 'scale(.3)'
@@ -20,7 +19,6 @@ gsap.to(".opener", {
 gsap.to(".avgPrecentage", {
   scrollTrigger: {
     trigger: ".avgPrecentage",
-    markers: true
   },
   delay: 3,
   transform: 'scale(1.5)',
@@ -41,7 +39,6 @@ gsap.to(".cartScroll img", {
   scrollTrigger: {
       trigger: ".cartScroll img",
       toggleActions: "play reset none reverse",
-      markers: true,
       end: "bottom center",
       // start: "top center",
       scrub: true,
@@ -55,7 +52,6 @@ gsap.to(".KPI-card", {
   scrollTrigger: {
       trigger: ".cartScroll",
       toggleActions: "play reset none reverse",
-      markers: true,
       end: "bottom center",
       // start: "top center",
       scrub: true,
@@ -74,7 +70,6 @@ gsap.to(".revenue img", {
       trigger: ".revenue",
       end: "center center",
       toggleActions: "play none none reverse",
-      markers: true,
       scrub: true,
   },
   transform: 'scale(.95) rotate(0deg) translateY(0%) translateX(0%)',
@@ -84,7 +79,6 @@ gsap.to(".summaryCard", {
   scrollTrigger: {
       trigger: ".summaryCard",
       toggleActions: "play none none reverse",
-      markers: true,
   },
   stagger: 0.2,
   transform: 'translateY(0%)',
@@ -95,7 +89,6 @@ gsap.to(".summaryCardSec", {
   scrollTrigger: {
       trigger: ".summaryCard",
       toggleActions: "play none none reverse",
-      markers: true,
   },
   stagger: 0.2,
   delay: 0.55,
