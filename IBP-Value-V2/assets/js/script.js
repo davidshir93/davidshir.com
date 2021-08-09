@@ -77,7 +77,7 @@ gsap.to(".revenue img", {
       markers: true,
       scrub: true,
   },
-  transform: 'scale(.75) rotate(0deg) translateY(0%) translateX(0%)',
+  transform: 'scale(.95) rotate(0deg) translateY(0%) translateX(0%)',
 })
 
 gsap.to(".summaryCard", {
@@ -87,6 +87,18 @@ gsap.to(".summaryCard", {
       markers: true,
   },
   stagger: 0.2,
+  transform: 'translateY(0%)',
+  opacity: '1',
+})
+
+gsap.to(".summaryCardSec", {
+  scrollTrigger: {
+      trigger: ".summaryCard",
+      toggleActions: "play none none reverse",
+      markers: true,
+  },
+  stagger: 0.2,
+  delay: 0.4,
   transform: 'translateY(0%)',
   opacity: '1',
 })

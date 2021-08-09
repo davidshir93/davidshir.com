@@ -50,16 +50,51 @@ h2 {
 }
 
 h3 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
     font-size: 50px;
+    line-height: 120%;
 }
 
 h4 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: bold;
     font-size: 30px;
+    line-height: 120%;
+    /* identical to box height, or 36px */
+
+    letter-spacing: 0.01em;
+    text-indent: 2px;
+    text-transform: capitalize;
 }
 
 h5 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
     font-size: 25px;
     line-height: 120%;
+    /* or 30px */
+
+letter-spacing: 0.01em;
+}
+
+h6 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.h7 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 p {
@@ -72,6 +107,10 @@ p {
 
 .nmg-text-shadow {
     text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;
+}
+
+.nmg-box-shadow {
+    box-shadow: 6px 6px 0px #000000;
 }
 
 .blue {
@@ -291,25 +330,39 @@ h3#inline {
 
 .summaryCards {
     display: flex;
+    width: 100%;
 }
 
 .summaryCard {
+    padding: 24px;
+    padding-bottom: 0;
+    margin-right: 24px;
+    background: var(--NMG-Gray);
+    border: 1.5px solid var(--NMG-Black);
+    z-index: 20;
+    width: 25%;
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+.summaryCardSec {
+    margin-top: 24px;
     padding: 24px;
     margin-right: 24px;
     background: var(--NMG-Gray);
     border: 1.5px solid var(--NMG-Black);
     z-index: 20;
-    width: 200px;
+    width: 25%;
     transform: translateY(150%);
     opacity: 0;
 }
 
-.summaryCard:nth-last-child() {
+.summaryCard:nth-last-child(), .summaryCardSec:nth-last-child() {
     margin-right: 0px;
 }
 
-.summaryCard h4{
-    text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;
+.summaryCard h3{
+    padding-top: 8px;
     margin-bottom: 16px;
 }
 
@@ -317,13 +370,21 @@ h3#inline {
     margin-bottom: 16px;
 }
 
-.summaryCard:nth-child(1) h4{
+.summaryCardSec h4{
+    margin-bottom: 8px;
+}
+
+.summaryCardSec h5 {
+    margin-bottom: 8px;
+}
+
+.summaryCard:nth-child(1) h3{
     color: var(--NMG-M2-Blue);
 }
-.summaryCard:nth-child(2) h4{
+.summaryCard:nth-child(2) h3{
     color: var(--NMG-M3-Pink);
 }
-.summaryCard:nth-child(3) h4{
+.summaryCard:nth-child(3) h3{
     color: var(--NMG-M5-Green);
 }
 
@@ -335,9 +396,10 @@ h3#inline {
 }
 
 .revenue .container {
-    max-width: 1160px;
+    max-width: 75%;
     margin-top: 48px;
     box-sizing: content-box!important;
+    margin: 0 auto;
 }
 
 .revenue .container h2 {
