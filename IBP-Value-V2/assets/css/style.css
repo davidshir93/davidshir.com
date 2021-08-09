@@ -348,6 +348,7 @@ h3#inline {
 .summaryCardSec {
     margin-top: 24px;
     padding: 24px;
+    padding-bottom: 0;
     margin-right: 24px;
     background: var(--NMG-Gray);
     border: 1.5px solid var(--NMG-Black);
@@ -391,15 +392,16 @@ h3#inline {
 .revenue {
     z-index: 7;
     background-color: var(--NMG-Yellow);
-    height: 85vh;
+    height: 100vh;
     box-sizing: content-box!important;
 }
 
 .revenue .container {
     max-width: 75%;
-    margin-top: 48px;
+    margin-top: 24px;
     box-sizing: content-box!important;
-    margin: 0 auto;
+    margin-left: 48px;
+    margin-bottom: 0;
 }
 
 .revenue .container h2 {
@@ -407,11 +409,15 @@ h3#inline {
     text-shadow: 4px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 2px 2px 0px #000;
 }
 
+.revenue .container h6, .revenue .container h3 {
+    display: inline-block;
+}
+
 .revenue .container h3 {
     margin-top: -16px;
 }
 
-.revenue .container p {
+.revenue .container h6 {
     margin-bottom: 24px;
 }
 
@@ -460,6 +466,7 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
     background-color: var(--NMG-Yellow);
     height: 15vh;
     display: flex;
+    opacity: 0;
 }
 
 .shareBtn {

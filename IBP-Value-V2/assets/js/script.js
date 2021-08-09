@@ -98,7 +98,7 @@ gsap.to(".summaryCardSec", {
       markers: true,
   },
   stagger: 0.2,
-  delay: 0.4,
+  delay: 0.55,
   transform: 'translateY(0%)',
   opacity: '1',
 })
