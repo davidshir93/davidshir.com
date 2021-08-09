@@ -29,9 +29,14 @@ body {
 
 #closeIcon {
     position: fixed;
-    right: 16px;
-    top: 16px;
+    right: 24px;
+    top: 24px;
     z-index: 25;
+    transition: all 300ms cubic-bezier(.44,1.46,.87,.87);
+}
+
+#closeIcon:hover {
+    transform: rotate(90deg);
 }
 
 .container {
@@ -333,6 +338,28 @@ h3#inline {
 
 .revenue {
     overflow: hidden;
+    position: relative;
+}
+
+.namogooPlusContainer {
+    margin: 0 auto;
+    position: relative;
+    top: 24px;
+}
+
+.namogooPlusContainer img {
+    display: inline;
+}
+
+.domainSummary {
+    display: inline;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 100%;
+    /* identical to box height, or 26px */
+    letter-spacing: 0.1em;
 }
 
 .summaryCards {
@@ -355,7 +382,7 @@ h3#inline {
 .summaryCardSec {
     margin-top: 24px;
     padding: 24px;
-    padding-bottom: 0;
+    /* padding-bottom: 8px; */
     margin-right: 24px;
     background: var(--NMG-Gray);
     border: 1.5px solid var(--NMG-Black);
@@ -379,10 +406,6 @@ h3#inline {
 }
 
 .summaryCardSec h4{
-    margin-bottom: 8px;
-}
-
-.summaryCardSec h5 {
     margin-bottom: 8px;
 }
 

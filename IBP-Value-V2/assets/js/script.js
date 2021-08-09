@@ -65,7 +65,7 @@ gsap.to(".KPI-card", {
 
 // Summary
 
-gsap.to(".revenue img", {
+gsap.to("#summaryBG", {
   scrollTrigger: {
       trigger: ".revenue",
       end: "center center",
