@@ -137,7 +137,7 @@ p {
     color: var(--NMG-M5-Green);
 }
 
-.opener, .percentages, .percentages02, .revenue, .KPIs {
+.percentages, .percentages02, .revenue, .KPIs {
     height: 150vh;
     display: flex;
     justify-content: center;
@@ -151,22 +151,26 @@ p {
     background-color: var(--NMG-Yellow);
     border-radius: 100%;
     transform: scale(2);
-    margin: 0 auto;
     padding: 0;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    margin: 0 auto!important;
+    box-sizing: content-box!important;
+    top: 0px;
+}
+
+.openingTexts {
+    margin-top: 30vh;
+    z-index: 55!important;
+    position: relative;
+    
 }
 
 .openingTexts h1 {
-    font-size: 50px;
     text-align: center;
-    margin-bottom: 16px;
-}
-
-.opener {
-    z-index: 10;
+    margin-bottom: 24px;
+    z-index: 55;
 }
 
 /* Circles Average Discount Section */
@@ -344,22 +348,16 @@ h3#inline {
 .namogooPlusContainer {
     margin: 0 auto;
     position: relative;
-    top: 24px;
-}
-
-.namogooPlusContainer img {
-    display: inline;
+    top: 32px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .domainSummary {
-    display: inline;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 100%;
-    /* identical to box height, or 26px */
-    letter-spacing: 0.1em;
+    text-align: center;
+    margin-left: 8px;
 }
 
 .summaryCards {
@@ -432,6 +430,8 @@ h3#inline {
     box-sizing: content-box!important;
     margin-left: 48px;
     margin-bottom: 0;
+    position: absolute;
+
 }
 
 .revenue .container h2 {
@@ -453,7 +453,13 @@ h3#inline {
     margin-bottom: 24px;
 }
 
-.revenue img {
+.revenue .namogooPlusContainer {
+    margin-bottom: 24px;
+    position: absolute;
+    margin: 0 auto;
+}
+
+#summaryBG {
     position: absolute;
     transform: scale(.2) rotate(-65deg) translateY(6000px) translateX(200%);
     /* transform: scale(.7); */
@@ -476,10 +482,6 @@ h3#inline {
     transition: all 200ms ease-in-out;
 }
 
-.revenue .container {
-    position: absolute;
-}
-
 .revenue .container h2:hover .changeShippingCost{
     opacity: 1;
     transform: rotate(-15deg);
@@ -500,7 +502,7 @@ input, input:active, input:checked, input:focus, input:focus-visible, input:focu
 
 .share {
     background-color: var(--NMG-Yellow);
-    height: 15vh;
+    /* height: 15vh; */
     display: flex;
     opacity: 0;
 }

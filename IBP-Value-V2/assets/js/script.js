@@ -11,7 +11,8 @@ gsap.to(".opener", {
         start: "center center",
         scrub: true,
     },
-    transform: 'scale(.3)'
+    scaleX: 0.3,
+    scaleY: 0.3
 })
 
 // Below Max Discount
