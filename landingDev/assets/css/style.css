@@ -92,13 +92,29 @@ header h1 {
 /* Navigation Bar */
 
 nav {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0 auto;
-    bottom: 16px;
+    /* position: fixed; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* margin: 0 auto; */
+    /* bottom: 24px; */
     background: var(--B-Purple);
     border-radius: 48px;
+    margin-bottom: 24px; 
+    align-self: center;
+}
+
+.navWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    /* this is what centers your element in the fixed wrapper*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end; /* aligns on vertical for column */
+    align-items: center; /* aligns on horizontal for column */  
 }
 
 nav ul a {
@@ -106,6 +122,8 @@ nav ul a {
     margin: 8px;
     padding: 16px;
     border-radius: 48px;
+    color: var(--D-Gray);
+    z-index: 5;
 }
 
 a li {
@@ -114,10 +132,22 @@ a li {
 
 nav ul {
     display: flex;
+    position: relative;
 }
 
 ul a.active {
     background: var(--E-AlmostWhite);
+    color: var(--B-Purple);
+}
+
+#marker {
+    background: var(--E-AlmostWhite);
+    position: absolute;
+    z-index: 2;
+    border-radius: 48px;
+    bottom: 32px;
+    padding: 16px;
+    transition: all 200ms ease-in-out;
 }
 
 /* Projects */
