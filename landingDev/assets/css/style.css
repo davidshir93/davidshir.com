@@ -117,16 +117,22 @@ nav {
     align-items: center; /* aligns on horizontal for column */  
 }
 
-nav ul a {
+nav ul li {
     text-decoration: none;
     margin: 8px;
     padding: 16px;
     border-radius: 48px;
     color: var(--D-Gray);
     z-index: 5;
+    transition: all 200ms ease-in-out;
 }
 
-a li {
+nav ul li a {
+    color: var(--D-Gray);
+    text-decoration: none;
+}
+
+nav ul li {
     list-style: none;
 }
 
@@ -135,8 +141,8 @@ nav ul {
     position: relative;
 }
 
-ul a.active {
-    background: var(--E-AlmostWhite);
+li a.active {
+    /* background: var(--E-AlmostWhite); */
     color: var(--B-Purple);
 }
 
@@ -175,7 +181,7 @@ ul a.active {
 /* Contact */
 
 .contact {
-    height: 80vh;
+    height: 100vh;
 }
 
 #socialLinks a svg {
