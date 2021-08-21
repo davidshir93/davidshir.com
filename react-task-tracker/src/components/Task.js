@@ -1,13 +1,20 @@
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
 
-const Task = ({ id, name, priority, reminder }) => {
+const Task = ({ task, onDelete }) => {
     return (
         <div className='task'>
-            <h5 style={{ opacity: 0.3 }}>{id}</h5>
-            <h3>{name}</h3>
-            <h5 style={{ marginBottom: '24px' }}>Priority: {priority}</h5>
-        <div/>
+            {/* <h3 style={{ opacity: 0.3, display: 'inline', marginRight: '8px'}}>{task.id}</h3> */}
+            <h3>
+                {task.name}
+                <FaTimes 
+                    style={{ color: 'red', cursor: 'pointer' }}
+                    onClick={() => onDelete(task.id)}
+                />
+            </h3>
+            <h5>Priority: {task.priority}</h5>
+        </div>
     )
 }
 
-export default Tasks
+export default Task
