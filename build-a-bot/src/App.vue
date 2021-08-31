@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li class="nav-item">
-          <img src="./assets/build-a-bot-logo.png" alt="logo" class="logo">
+          <img src="./assets/build-a-bot-logo.png" alt="logo" class="logo" />
           Build a bot
         </li>
       </ul>
@@ -11,17 +11,28 @@
   </header>
   <main>
     <RobotBuilder />
+    <TestHere
+      v-model='msg'
+      placeholder='Name'
+      type='password'
+      textColor='red'
+      placeholderColor='orange'
+      lineColor='black'
+      closeBtnColor='blue'
+    />
   </main>
 </template>
 
 <script>
 // import HomePage from './home/HomePage.vue';
 import RobotBuilder from './build/RobotBuilder.vue';
+import TestHere from './build/TestHere.vue';
 
 export default {
   name: 'App',
   components: {
     RobotBuilder,
+    TestHere,
   },
 };
 </script>
