@@ -191,54 +191,48 @@ li a.active {
 
 .work {
   background: var(--D-Gray);
-  grid-area: work;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width:100%;
+  grid-column-gap: 48px;
+  grid-row-gap: 96px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 0.1fr repeat(3, 1fr);
   grid-template-areas:
     "workTitle workTitle workTitle workTitle workTitle workTitle workTitle workTitle workTitle workTitle workTitle workTitle"
-    "projectImg1 projectImg1 projectImg1 projectImg1 projectImg1 . projectDetails1 projectDetails1 projectDetails1 projectDetails1 projectDetails1 projectDetails1"
-    "projectImg2 projectImg2 projectImg2 projectImg2 projectImg2 . projectDetails2 projectDetails2 projectDetails2 projectDetails2 projectDetails2 projectDetails2"
-    "projectImg3 projectImg3 projectImg3 projectImg3 projectImg3 . projectDetails3 projectDetails3 projectDetails3 projectDetails3 projectDetails3 projectDetails3";
+    "projectImg1 projectImg1 projectImg1 projectImg1 projectImg1  projectImg1  projectDetails1 projectDetails1 projectDetails1 projectDetails1 projectDetails1 projectDetails1"
+    "projectDetails2 projectDetails2 projectDetails2 projectDetails2 projectDetails2 projectDetails2 projectImg2 projectImg2 projectImg2 projectImg2 projectImg2 projectImg2"
+    "projectImg3 projectImg3 projectImg3 projectImg3 projectImg3  projectImg3  projectDetails3 projectDetails3 projectDetails3 projectDetails3 projectDetails3 projectDetails3";
 }
 
 #workTitle {
   grid-area: workTitle;
 }
 
-.work .container {
-  /* display: flex;
-  flex-wrap: wrap; */
+.projectDetails1 {
+  grid-area: projectDetails1;
+}
+.projectDetails2 {
+  grid-area: projectDetails2;
+}
+.projectDetails3 {
+  grid-area: projectDetails3;
 }
 
-.project {
-  /* display: flex;
-  flex-wrap: wrap; */
-  padding: 24px 0;
-  /* margin: 48px 0; */
+.grid img {
+  width: 100%;
 }
 
-.projectImg {
-  grid-area: projectImg;
+.projectImg1 {
+  grid-area: projectImg1;
 }
-
-.project:nth-child(3) {
-  /* flex-direction: row-reverse; */
+.projectImg2 {
+  grid-area: projectImg2;
 }
-
-.project img {
-  width: initial;
-}
-
-.projectDetails {
-  grid-area: projectDetails;
-  padding: 24px;
-  /* width: 41.66%;
-  margin-left: 8.33%; */
-}
-
-.project:nth-child(3) .projectDetails {
-  /* margin-left: 0%;
-  margin-right: 8.33%; */
+.projectImg3 {
+  grid-area: projectImg3;
 }
 
 .projectDetails p {
@@ -338,3 +332,4 @@ footer {
 .legal {
   text-align: center;
 }
+
