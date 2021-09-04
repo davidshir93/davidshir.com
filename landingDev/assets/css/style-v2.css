@@ -13,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-size: 24px;
 }
 
 /* Design System Fonts and Colors */
@@ -20,30 +21,39 @@
 h1 {
   font-style: normal;
   font-weight: 500;
-  font-size: 88px;
-  line-height: 104px;
+  /* font-size: 88px; */
+  /* line-height: 104px; */
+  font-size: 3.66rem;
+  line-height: 4.33rem;
   color: var(--B-Purple);
 }
 
 h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 64px;
-  line-height: 72px;
+  /* font-size: 64px;
+  line-height: 72px; */
+  font-size: 2.66rem;
+  line-height: 3rem;
   color: var(--A-Dark);
 }
 
 p {
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 40px;
+  /* font-size: 24px;
+  line-height: 40px; */
+  font-size: 1rem;
+  line-height: 1.66rem;
   color: var(--B-Purple);
 }
 
 .tag {
   font-size: 12px;
   line-height: 16px;
+  /* Not using responsive font sizing here because it is too small to read */
+  /* font-size: 0.5rem;
+  line-height: 0.66rem; */
   color: var(--C-Pink);
   display: inline-block;
   padding: 2px 12px 4px;
@@ -195,9 +205,9 @@ li a.active {
 
 .grid {
   display: grid;
-  max-width:100%;
-  grid-column-gap: 48px;
-  grid-row-gap: 96px;
+  max-width: 100%;
+  column-gap: 2rem;
+  row-gap: 8rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 0.1fr repeat(3, 1fr);
   grid-template-areas:
@@ -236,11 +246,11 @@ li a.active {
 }
 
 .projectDetails p {
-  margin-top: 8px;
+  margin-top: 1rem;
 }
 
 .tags {
-  margin-top: 24px;
+  margin-top: 1rem;
 }
 
 /* About */
@@ -251,12 +261,12 @@ li a.active {
 }
 
 .about .container > p {
-  margin-top: 64px;
+  margin-top: 2.66rem;
   width: 50%;
 }
 
 .stackIcons {
-  margin-top: 128px;
+  margin-top: 5.33rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -325,7 +335,7 @@ svg path {
 /* Footer */
 
 footer {
-  padding: 64px 0;
+  padding: 2.66rem 0;
   grid-area: footer;
 }
 
@@ -333,3 +343,32 @@ footer {
   text-align: center;
 }
 
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+  .grid {
+    row-gap: 1.66rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "workTitle"
+      "projectImg1"
+      "projectDetails1"
+      "projectImg2"
+      "projectDetails2"
+      "projectImg3"
+      "projectDetails3"
+  }
+  .projectDetails {
+    margin-bottom: 3rem;
+  }
+}
