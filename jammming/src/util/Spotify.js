@@ -1,5 +1,5 @@
 const clientId = '5b4d7a62abd740c2b85f6bec2f2cf4fc';
-const redirectUrl = 'http://localhost:3000/'
+const redirectUrl = 'http://nonchalant-bucket.surge.sh/'
 let accessToken;
 
 const Spotify = {
@@ -48,6 +48,39 @@ const Spotify = {
                  uri: track.uri
              }))
          })
+     },
+
+     savePlaylist(playlistName, tracksUri) {
+
+         if (!playlistName || !tracksUri.length) {
+             return
+         }
+
+         const accessToken = Spotify.getAccessToken(); 
+         const headers = { Authorization: `Bearer ${accessToken}` };
+         let userId;
+
+         return fetch('https://api.spotify.com/v1/me', { headers: headers}
+         ).then(response => response.json()
+         ).then(jsonResponse => {
+             userId = jsonResponse.id;
+             return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+                 headers: headers,
+                 method: 'POST',
+                 body: JSON.stringify({ name: playlistName })
+             }
+             ).then(response => response.json()
+             ).then(jsonResponse => {
+                 const playlistId = jsonResponse.id;
+                 return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, {
+                     headers: headers,
+                     method: 'POST',
+                     body: JSON.stringify({ uris: tracksUri })
+                 })
+             })
+         })
+
+
      }
 
 }
