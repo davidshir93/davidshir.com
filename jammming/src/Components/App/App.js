@@ -7,6 +7,8 @@ import SavingAnimation from '../SavingAnimation/SavingAnimation';
 
 import Spotify from '../../util/Spotify';
 
+import { Spring } from 'react-spring';
+
 export default class App extends React.Component {
 
   constructor(props) {
