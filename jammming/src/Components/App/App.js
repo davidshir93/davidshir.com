@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
+import SavingAnimation from '../SavingAnimation/SavingAnimation';
 
 import Spotify from '../../util/Spotify';
 
@@ -13,7 +14,8 @@ export default class App extends React.Component {
     this.state = {
       searchResults: [],
       playlistName: 'New Playlist',
-      playlistTracks: []
+      playlistTracks: [],
+      isSaving: false
     }
 
     this.addTrack = this.addTrack.bind(this);
@@ -43,14 +45,16 @@ export default class App extends React.Component {
   }
 
   savePlaylist() {
-    alert('save playlist clicked!');
+    this.setState({isSaving: true})
     const trackUris = this.state.playlistTracks.map(track => track.uri);
     Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
       this.setState({
         playlistName: 'New Playlist',
-        playlistTracks: []
+        playlistTracks: [],
       })
-    });
+    }).then(() => {
+      setTimeout(() => { this.setState({isSaving: false}) }, 3000)
+    })
   }
 
   onSearch(searchTerm) {
@@ -61,27 +65,32 @@ export default class App extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
-        <div className="App">
-          <SearchBar onSearch={this.onSearch}/>
-          <div className="App-playlist">
-            <SearchResults 
-              searchResults={this.state.searchResults} 
-              onAdd={this.addTrack}  
-            />
-            <Playlist 
-              playlistName={this.state.playlistName} 
-              playlistTracks={this.state.playlistTracks} 
-              onRemove={this.removeTrack}
-              onNameChange={this.updatePlaylistName}
-              onSave={this.savePlaylist}
-            />
+    if (this.state.isSaving) {
+      return <SavingAnimation />
+    } else {
+      return (
+        <div>
+          <h1>Ja<span className="highlight">mmm</span>ing</h1>
+          {/* <SavingAnimation isSaving={this.state.isSaving}/> */}
+          <div className="App">
+            <SearchBar onSearch={this.onSearch}/>
+            <div className="App-playlist">
+              <SearchResults 
+                searchResults={this.state.searchResults} 
+                onAdd={this.addTrack}  
+              />
+              <Playlist 
+                playlistName={this.state.playlistName} 
+                playlistTracks={this.state.playlistTracks} 
+                onRemove={this.removeTrack}
+                onNameChange={this.updatePlaylistName}
+                onSave={this.savePlaylist}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    )
+      )  
+    }
   }
 
 };
