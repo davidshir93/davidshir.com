@@ -4,6 +4,10 @@
     --accent-color: rgb(217, 155, 255);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -494,6 +498,7 @@ svg path {
 
     .grid {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 12px;
     }
 
     header {
@@ -530,7 +535,7 @@ svg path {
         top: 10vh;
         margin: 0;
         padding: 0;
-        height: 100vh;
+        height: 90vh;
         width: 100%;
         display: flex;
         flex-direction: column;
