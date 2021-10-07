@@ -88,6 +88,7 @@ function App() {
             {/* Add props to AppointmentsPage */}
             <AppointmentsPage 
               appointments={appointments}
+              contacts={contacts}
               newAppointment={newAppointment}
             />
           </Route>
