@@ -19,7 +19,7 @@ function App() {
   const [appointments, setAppointments] = useState([
     {
       title: "The most important meeting in the world",
-      contact: "David",
+      contact: contacts[0].name,
       date: new Date(),
       time: new Date().getTime()
     }
