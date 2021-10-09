@@ -27,6 +27,11 @@ function App() {
       name: "David",
       phoneNumber: "0509290166",
       email: "davidshir93@gmail.com"
+    },
+    {
+      name: "Dana",
+      phoneNumber: "0505454166",
+      email: "danaporat@gmail.com"
     }
   ])
   const [appointments, setAppointments] = useState([
