@@ -46,7 +46,7 @@ export const AppointmentForm = ({
         contacts={contacts}
         onChange={handleContactChange}
       />
-      <input type="submit" name="submit">Submit</input>
+      <input type="submit" name="submit" />
     </form>
   );
 };

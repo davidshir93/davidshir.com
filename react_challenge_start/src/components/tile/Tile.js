@@ -5,7 +5,12 @@ export const Tile = ({ tile }) => {
   return (
     <div className="tile-container">
       {values.map(key => {
-         return <p className="tile">{key}</p> 
+         return <p 
+                  className="tile"
+                  key={key}
+                >
+                  {key}
+                </p> 
       })}
     </div>
   );

@@ -5,6 +5,19 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
+  
+  const getTodayString = () => {
+    const [month, day, year] = new Date()
+      .toLocaleDateString("en-US")
+      .split("/");
+    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+  }
+
+  const getHoursString = () => {
+    const date = new Date();
+    return `${date.getHours()}:${date.getMinutes()}`;
+  }
+
   /*
   Define state variables for 
   contacts and appointments 
@@ -20,10 +33,11 @@ function App() {
     {
       title: "The most important meeting in the world",
       contact: contacts[0].name,
-      date: new Date(),
-      time: new Date().getTime()
+      date: getTodayString(),
+      time: getHoursString()
     }
   ])
+
 
   const newContact = (name, phoneNumber, email) => {
     setContacts(prev => 
