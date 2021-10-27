@@ -2,6 +2,10 @@
   <div>
     <div class="top-row">
       <div class="top part">
+        <div class="robot-title">
+          {{availableParts.heads[selectedHeadIndex].title}}
+          <span class="sale" v-if="availableParts.heads[selectedHeadIndex].onSale">Sale!</span>
+        </div>
         <img :src="availableParts.heads[selectedHeadIndex].src" title="head"/>
         <button @click="selectPreviousHead()" class="prev-selector">&#9668;</button>
         <button @click="selectNextHead()" class="next-selector">&#9658;</button>
@@ -212,5 +216,14 @@ export default {
 }
 .right .next-selector {
   right: -3px;
+}
+.robot-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: -25px;
+}
+.sale {
+  color: red;
 }
 </style>

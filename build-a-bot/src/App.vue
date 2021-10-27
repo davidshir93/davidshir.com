@@ -11,28 +11,17 @@
   </header>
   <main>
     <RobotBuilder />
-    <TestHere
-      v-model='msg'
-      placeholder='Name'
-      type='password'
-      textColor='red'
-      placeholderColor='orange'
-      lineColor='black'
-      closeBtnColor='blue'
-    />
   </main>
 </template>
 
 <script>
 // import HomePage from './home/HomePage.vue';
 import RobotBuilder from './build/RobotBuilder.vue';
-import TestHere from './build/TestHere.vue';
 
 export default {
   name: 'App',
   components: {
     RobotBuilder,
-    TestHere,
   },
 };
 </script>
