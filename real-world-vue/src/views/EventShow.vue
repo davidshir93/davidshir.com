@@ -1,10 +1,9 @@
 <template>
-	<h1>vgcf</h1>
-	<h2></h2>
+  <h1>Showing Event #1</h1>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>
