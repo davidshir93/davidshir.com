@@ -1,52 +1,49 @@
-const sections = document.querySelectorAll('section');
+const sections = [...document.querySelectorAll('[data-section]')];
 const marker = document.getElementById('marker');
-const nav = document.querySelector('nav');
+
+const onIntersect = (entries) => {
+	entries.forEach((entry) => {
+		const className = entry.target.className;
+		const activeAnchor = document.querySelector(`[data-page=${className}]`);
+		if (activeAnchor && className !== 'open-banner') {
+			const activeAnchorChild = activeAnchor.firstElementChild;
+			const coords = activeAnchor.getBoundingClientRect();
+
+			if (entry.isIntersecting) {
+				let directions = {
+					height: coords.height,
+					width: coords.width,
+					bottom: coords.bottom,
+					left: coords.left,
+					right: coords.right,
+				};
+				marker.style.setProperty('opacity', '1');
+				marker.style.setProperty('left', `${directions.left}px`);
+				marker.style.setProperty('bottom', `${directions.top}px`);
+				marker.style.setProperty('height', `${directions.height}px`);
+				marker.style.setProperty('width', `${directions.width}px`);
+				const allActiveElements = [...document.querySelectorAll('.active')];
+				allActiveElements.forEach((activeElement) => {
+					activeElement.classList.remove('active');
+				});
+				activeAnchorChild.classList.add('active');
+			} else {
+				activeAnchorChild.classList.remove('active');
+			}
+		}
+		if (className === 'open-banner' && entry.isIntersecting) {
+			marker.style.setProperty('opacity', '0');
+		}
+	});
+};
 
 const options = {
-    rootMargin: '0px',
-    threshold: 0.4,
-}
+	rootMargin: '-200px',
+	threshold: 0.1,
+};
 
-const navCheck = (entries, observer) => {
-    entries.forEach(entry => {
+const observer = new IntersectionObserver(onIntersect, options);
 
-        const className = entry.target.className;
-        const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const activeAnchorChild = activeAnchor.firstElementChild;
-        const coords = activeAnchor.getBoundingClientRect();
-        console.log(coords);
-
-        let directions = {
-            height: coords.height,
-            width: coords.width,
-            bottom: coords.bottom,
-            left: coords.left,
-            right: coords.right
-        };
-
-        console.log(directions.width);
-
-        if (entry.isIntersecting) {
-            marker.style.setProperty('opacity', '1');
-            marker.style.setProperty('left', `${directions.left}px`);
-            marker.style.setProperty('bottom', `${directions.top}px`);
-            marker.style.setProperty('height', `${directions.height}px`);
-            marker.style.setProperty('width', `${directions.width}px`);
-            activeAnchorChild.classList.add('active');
-        } else {
-            activeAnchorChild.classList.remove('active');
-
-        }
-
-        if (entry.intersectionRatio < 0.1) {
-            marker.style.setProperty('opacity', '0');
-        }
-
-    })
-}
-
-let observer = new IntersectionObserver(navCheck, options);
-
-sections.forEach(section => {
-    observer.observe(section)
-})
+sections.forEach((section) => {
+	observer.observe(section);
+});
