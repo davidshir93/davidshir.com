@@ -379,4 +379,8 @@ footer {
 		margin-top: 2.66rem;
 		width: 100%;
 	}
+	footer {
+		padding: 4.66rem 0;
+		grid-area: footer;
+	}
 }
