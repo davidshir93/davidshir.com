@@ -19,7 +19,7 @@ function setup() {
 	var options = {
 		isStatic: true,
 	};
-	ground = Bodies.rectangle(500, height, width, 10, options);
+	ground = Bodies.rectangle(500, height, width, 100, options);
 	Composite.add(world, ground);
 }
 
@@ -33,4 +33,7 @@ function draw() {
 	for (var i = 0; i < boxes.length; i++) {
 		boxes[i].show();
 	}
+	rectMode(CENTER);
+	fill(170);
+	rect(ground.position.x, ground.position.y, width, 100);
 }
