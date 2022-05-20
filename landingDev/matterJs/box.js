@@ -1,11 +1,11 @@
-function Box(x, y, width, height) {
+function Box(x, y, radius, color = '#f48686') {
 	var options = {
 		friction: 0.8,
 		restitution: 1,
 	};
-	this.body = Bodies.rectangle(x, y, width, height, options);
-	this.width = width;
-	this.height = height;
+	this.body = Bodies.circle(x, y, radius, options);
+	this.radius = radius;
+	this.color = color;
 	Composite.add(world, this.body);
 
 	this.show = function () {
@@ -14,11 +14,11 @@ function Box(x, y, width, height) {
 		push();
 		translate(pos.x, pos.y);
 		rotate(angle);
-		rectMode(CENTER);
-		strokeWeight(1);
-		stroke(255);
-		fill(127);
-		rect(0, 0, this.width, this.height);
+		// rectMode(CENTER);
+		strokeWeight(0);
+		// stroke(255);
+		fill(this.color);
+		ellipse(0, 0, this.radius * 2);
 		pop();
 	};
 }
