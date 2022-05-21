@@ -1,4 +1,4 @@
-function Box(x, y, radius, color = '#f48686') {
+function Circle(x, y, radius, color = '#f48686') {
 	var options = {
 		friction: 0.8,
 		restitution: 1,
@@ -7,6 +7,15 @@ function Box(x, y, radius, color = '#f48686') {
 	this.radius = radius;
 	this.color = color;
 	Composite.add(world, this.body);
+
+	this.isOffscreen = function () {
+		var pos = this.body.position;
+		return pos.y > height + 100;
+	};
+
+	this.removeFromWorld = function () {
+		Composite.remove(world, this.body);
+	};
 
 	this.show = function () {
 		var pos = this.body.position;

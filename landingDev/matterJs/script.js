@@ -6,7 +6,7 @@ var Engine = Matter.Engine,
 
 var engine;
 var world;
-var boxes = [];
+var circles = [];
 var runner;
 var ground;
 var boundaries = [];
@@ -26,30 +26,35 @@ function setup() {
 	boundaries.push(new Boundary(700, 550, 500, 25, 320));
 }
 
-function newBox() {
-	// Creating a random size and color for the new box
+function newCircle() {
+	// Creating a random size and color for the new Circle
 	let size = Math.round(Math.random() * 50) + 10;
 	let color = colors[Math.round(Math.random() * colors.length)];
 
-	// Create a new Box and push it to the boxes array
-	boxes.push(new Box(mouseX, mouseY, size, color));
+	// Create a new Circle and push it to the circles array
+	circles.push(new Circle(mouseX, mouseY, size, color));
 }
 
 function mouseDragged() {
-	// newBox();
+	// newCircle();
 	if (Math.random() > 0.7) {
-		newBox();
+		newCircle();
 	}
 }
 
 function mousePressed() {
-	newBox();
+	newCircle();
 }
 
 function draw() {
 	background(51);
-	for (var i = 0; i < boxes.length; i++) {
-		boxes[i].show();
+	for (var i = 0; i < circles.length; i++) {
+		circles[i].show();
+		if (circles[i].isOffscreen()) {
+			circles[i].removeFromWorld();
+			circles.splice(i, 1);
+			i--;
+		}
 	}
 	for (var i = 0; i < boundaries.length; i++) {
 		boundaries[i].show();
