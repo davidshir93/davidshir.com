@@ -13,6 +13,20 @@ var boundaries = [];
 
 var colors = ['#eff3f5', '#596ac6', '#f48686'];
 
+// Get the gravity state
+var gravityToggleEl = document.getElementById('gravity');
+var gravityIsOpposite = false;
+gravityToggleEl.addEventListener('click', toggleGravity);
+
+function toggleGravity() {
+	gravityIsOpposite = !gravityIsOpposite;
+	if (gravityIsOpposite) {
+		engine.gravity.y = -1;
+	} else {
+		engine.gravity.y = 1;
+	}
+}
+
 function setup() {
 	createCanvas(1000, 800);
 	engine = Engine.create();
@@ -60,4 +74,6 @@ function draw() {
 		boundaries[i].show();
 	}
 	// ground.show();
+	// console.log(gravityToggle.value);
+	// console.log(gravityIsOpposite);
 }
