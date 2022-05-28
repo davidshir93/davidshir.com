@@ -1,7 +1,8 @@
-function Circle(x, y, radius, color = '#f48686') {
+function Circle(x, y, radius, color = '#f48686', fixed) {
 	var options = {
 		friction: 0.8,
 		restitution: 1,
+		isStatic: fixed,
 	};
 	this.body = Bodies.circle(x, y, radius, options);
 	this.radius = radius;
