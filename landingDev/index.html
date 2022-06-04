@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="./assets/js/colors.js" ></script>
+    <script src="./libraries/p5/p5.js" defer></script>
+    <script src="./libraries/matter.js" defer></script>
+    <script src="./assets/js/matterJs/circle.js" defer></script>
+    <script src="./assets/js/matterJs/boundary.js" defer></script>
+    <script src="./assets/js/matterJs/matterScript.js" defer></script>
+
     <!-- <script src="./assets/js/script.js" defer></script> -->
     <title>David Shir - Creative Front-End Developer</title>
 </head>
@@ -34,14 +41,20 @@
 
         <main>
 
-            <section class="open-banner" id="open-banner" data-section="open-banner">
-                <div class="container">
-                    <!-- <h1>Hey there! I’m David.<br> I build, design and animate user interfaces.</h1> -->
-                    <h1>Hey there! I’m David.<br> I build user interfaces.</h1>
-                    <img id="toggleImg" src="./assets/svg/Toggle.svg"/>
-                    <img id="checkboxImg" src="./assets/svg/Checkbox.svg"/>
-                </div>
-            </section>
+        <section class="open-banner" id="open-banner" data-section="open-banner">
+            <div class="container">
+                <!-- <h1>Hey there! I’m David.<br> I build, design and animate user interfaces.</h1> -->
+                <h1 class="disable-clicks">Hey there! I’m David.<br> I build user interfaces.</h1>
+                <!-- <img id="toggleImg" src="./assets/svg/Toggle.svg"/> -->
+                <!-- <img id="checkboxImg" src="./assets/svg/Checkbox.svg"/> -->
+            <!-- Rounded switch -->
+            <h4>You're god! You can change gravity here:</h4>
+                <label class="switch">
+                    <input type="checkbox" id="gravity" name="gravity" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </section>
         
             <section class="work" id="work" data-section="work">
                 <div class="container">

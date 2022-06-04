@@ -10,6 +10,10 @@ function Boundary(x, y, width, height, angle) {
 	this.height = height;
 	Composite.add(world, this.body);
 
+	this.relocate = function (newX, newY) {
+		this.body = Bodies.rectangle(newX, newY, width, height, options);
+	};
+
 	this.show = function () {
 		var pos = this.body.position;
 		var angle = this.body.angle;
@@ -18,7 +22,7 @@ function Boundary(x, y, width, height, angle) {
 		rotate(angle);
 		rectMode(CENTER);
 		noStroke();
-		fill(0);
+		fill(colorDGray);
 		rect(0, 0, this.width, this.height);
 		pop();
 	};
