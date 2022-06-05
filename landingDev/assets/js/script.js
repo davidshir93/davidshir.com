@@ -47,3 +47,5 @@ const observer = new IntersectionObserver(onIntersect, options);
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// TODO: recalculate after screen size has changed
