@@ -20,7 +20,7 @@
     <script src="./assets/js/matterJs/matterScript.js" defer></script>
 
     <!-- <script src="./assets/js/script.js" defer></script> -->
-    <title>David Shir - Creative Front-End Developer</title>
+    <title>David Shir - Front-End Developer</title>
   </head>
 
   <body>
@@ -45,13 +45,10 @@
     <main>
       <section class="open-banner" id="open-banner" data-section="open-banner">
         <div class="container">
-          <!-- <h1>Hey there! I’m David.<br> I build, design and animate user interfaces.</h1> -->
           <h1 class="disable-clicks">
             Hey there! I’m David.<br />
-            I build user interfaces.
+            A Front End Developer.
           </h1>
-          <!-- <img id="toggleImg" src="./assets/svg/Toggle.svg"/> -->
-          <!-- <img id="checkboxImg" src="./assets/svg/Checkbox.svg"/> -->
           <!-- Rounded switch -->
           <p class="switch-explanation">
             You're god! You can change gravity here:
@@ -67,10 +64,18 @@
         <div class="container">
           <div class="grid">
             <h2 id="work">Work</h2>
-            <div class="projectImg1 carousel">
-              <button class="carousel-btn prev">←</button>
-              <button class="carousel-btn next">→</button>
-              <ul>
+            <div class="projectImg1 carousel" data-carousel>
+              <button class="carousel-btn prev" data-carousel-button="prev">
+                ←
+              </button>
+              <button class="carousel-btn next" data-carousel-button="next">
+                →
+              </button>
+              <img
+                src="./assets/project-images/Project-Main-Image-1.png"
+                alt="Namogoo Platform"
+              />
+              <ul data-slides>
                 <li class="slide" data-active>
                   <img
                     src="./assets/project-images/Project-Main-Image-1.png"
@@ -79,13 +84,13 @@
                 </li>
                 <li class="slide">
                   <img
-                    src="./assets/project-images/Project-Main-Image-1.png"
+                    src="./assets/project-images/Project-Main-Image-2.png"
                     alt="Namogoo Platform"
                   />
                 </li>
                 <li class="slide">
                   <img
-                    src="./assets/project-images/Project-Main-Image-1.png"
+                    src="./assets/project-images/Project-Main-Image-3.png"
                     alt="Namogoo Platform"
                   />
                 </li>
@@ -119,6 +124,32 @@
               alt="Markdone Web App"
             />
             <div class="projectDetails projectDetails2">
+              <h1>Thoughts Challenger</h1>
+              <p>
+                A web application allowing users to challenge their thoughts in
+                order to clean up their cognitive distortions, and get some
+                mental clarity.
+              </p>
+              <div class="tags">
+                <div class="tag">React.js</div>
+                <div class="tag">Redux Toolkit</div>
+                <div class="tag">JavaScript</div>
+                <div class="tag">TypeScript</div>
+                <div class="tag">MongoDB</div>
+                <div class="tag">Firebase</div>
+                <div class="tag">OpenAI API</div>
+                <div class="tag">SASS</div>
+                <div class="tag">CSS Animation</div>
+                <div class="tag">Web Development</div>
+              </div>
+            </div>
+
+            <img
+              class="projectImg3"
+              src="./assets/project-images/Project-Main-Image-3.png"
+              alt="3rd Web Application"
+            />
+            <div class="projectDetails projectDetails3">
               <h1>Markdone Web App</h1>
               <p>
                 Markdone is a web application that allows you to create and keep
@@ -135,27 +166,6 @@
                 <div class="tag">SASS</div>
               </div>
             </div>
-
-            <img
-              class="projectImg3"
-              src="./assets/project-images/Project-Main-Image-3.png"
-              alt="3rd Web Application"
-            />
-            <div class="projectDetails projectDetails3">
-              <h1>3rd Web Application</h1>
-              <p>
-                This is a test for a short sentence that will get me my next job
-                yayy
-              </p>
-              <div class="tags">
-                <div class="tag">Web Development</div>
-                <div class="tag">CSS Animation</div>
-                <div class="tag">Vue.js</div>
-                <div class="tag">Interaction Design</div>
-                <div class="tag">Motion Design</div>
-                <div class="tag">Product Design</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -164,30 +174,24 @@
         <div class="container">
           <h2 id="about">About</h2>
           <p>
-            I’m an experienced Front End Developer with years of expertise in
-            Web Animations and Interaction Design. Strive to incorporate my
-            skills into the development of innovative, visually appealing,
-            pixel-perfect, and animated web apps, components, and experiences.
+            I’m an experienced Front End Developer with 3 years of experience in
+            web development and a background in Interaction Design and Web
+            Animation. Strive to incorporate my skills into the development of
+            innovative, visually appealing, pixel-perfect, and animated web
+            apps, components, and experiences.
           </p>
           <p>
-            Skilled in JavaScript Vanilla, Vue.js, React.js, CSS and CSS
-            Animations, SCSS, GSAP GreenSock, Vuex, Redux, Interaction Design,
-            2D and 3D Animation, Adobe After Effects, Figma, Maxon Cinema 4D.
+            Skilled in JavaScript Vanilla, React.js, Vue.js, Vuex, Redux,
+            TypeScript, Storybook, CSS and CSS Animation, SCSS, GSAP GreenSock,
+            MongoDB, Interaction Design, 2D and 3D Animation, Figma, Adobe After
+            Effects.
           </p>
-          <p>Front-End Engineer, Codecademy.</p>
           <p>
-            B.Des Visual Communication, Bezalel Academy of Arts and Design,
-            Jerusalem.
+            Front-End Engineer, Codecademy. B.Des Visual Communication, Bezalel
+            Academy of Arts and Design, Jerusalem. Associate’s degree,
+            Education, The Hebrew University of Jerusalem.
           </p>
           <p>Feel free to contact me :)</p>
-          <!-- <p>
-            I am specialized in front-end development, animations and
-            micro-interactions, usually working with CSS, Vue.js, Vannila JS,
-            HTML, P5.js, Adobe After Effects. I am trying to create unique and
-            playful websites to provide a memorable user experience. I am always
-            keeping an eye on performance to make sure the overall feeling stays
-            the same on every device, mobiles included.
-          </p> -->
 
           <div class="stackIcons">
             <div class="stackIconContainer">
@@ -307,5 +311,6 @@
     </footer>
 
     <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/carousel.js" defer></script>
   </body>
 </html>
