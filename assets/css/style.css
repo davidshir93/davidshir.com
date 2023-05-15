@@ -477,55 +477,6 @@ input:checked + .slider:before {
 	color: var(--C-Pink);
 }
 
-.carousel {
-	position: relative;
-	/* max-width: 100vw; */
-	/* height: fit-content; */
-}
-
-.carousel > img {
-	opacity: 0;
-	position: relative;
-}
-
-.carousel-btn {
-	background: none;
-	border: none;
-	z-index: 1;
-	cursor: pointer;
-	color: var(--C-Pink);
-	opacity: 0.5;
-	font-size: 1.33rem;
-	transition: opacity 100ms ease-in-out;
-}
-
-.carousel-btn.next {
-	position: absolute;
-	right: 0.5rem;
-	bottom: 1rem;
-}
-
-.carousel-btn.prev {
-	position: absolute;
-	left: 0.5rem;
-	bottom: 1rem;
-}
-
-.carousel-btn:hover {
-	opacity: 1;
-	color: var(--E-AlmostWhite);
-}
-
-.carousel ul {
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	position: absolute;
-	inset: 0;
-}
-
 .slide {
 	position: absolute;
 	inset: 0;
