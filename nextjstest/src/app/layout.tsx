@@ -38,10 +38,10 @@ export default function RootLayout({
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/about/juttom">Juttom</Link>
+              <Link href="/projects/namogoo">Namogoo</Link>
             </li>
             <li>
-              <Link href="/team">Team</Link>
+              <Link href="/projects/minutemedia">Minute Media</Link>
             </li>
           </ul>
         </nav>
